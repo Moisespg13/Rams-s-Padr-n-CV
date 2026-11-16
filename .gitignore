@@ -1,0 +1,7 @@
+# Carpetas de origen y borradores (los archivos web oficiales están en assets/)
+InformesDeMisProyectos/
+Certificados/
+Mis CVs/
+scratch/
+*.docx
+.vscode/

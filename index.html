@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramsés Padrón Gentile | Ingeniería en Electrónica</title>
+  <meta name="description" content="Portfolio y CV técnico de Ramsés Padrón Gentile: Proyectos de Hardware, Potencia, RF, Sistemas Embebidos, PPS e informes técnicos." />
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f97316' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='16' x='4' y='4' rx='2'/><rect width='6' height='6' x='9' y='9' rx='1'/><path d='M15 2v2'/><path d='M15 20v2'/><path d='M2 15h2'/><path d='M2 9h2'/><path d='M20 15h2'/><path d='M20 9h2'/><path d='M9 2v2'/><path d='M9 20v2'/></svg>" />
+
+  <!-- LaTeX Font (Computer Modern) & JetBrains Mono -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Computer Modern Serif"', '"Latin Modern Roman"', 'Cambria', 'Georgia', 'serif'],
+            sans: ['"Computer Modern Serif"', '"Latin Modern Roman"', 'Cambria', 'Georgia', 'serif'],
+            mono: ['"Computer Modern Typewriter"', '"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              orange: '#f97316',
+              red: '#ef4444',
+              yellow: '#eab308',
+              amber: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* LaTeX / Academic Typography */
+    body, html {
+      font-family: "Computer Modern Serif", "Latin Modern Roman", Cambria, Georgia, serif;
+    }
+
+    /* Clean Dark Carbon Background with Subtle Technical Grid */
+    .bg-grid-minimal {
+      background-color: #0c0d10;
+      background-image: 
+        radial-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+      background-size: 28px 28px, 84px 84px, 84px 84px;
+    }
+
+    /* Minimal Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0d10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f97316;
+    }
+  </style>
+</head>
+<body class="bg-grid-minimal text-zinc-100 min-h-screen font-sans antialiased selection:bg-orange-500 selection:text-zinc-950">
+
+  <!-- Navbar (Fixed, hidden at the top, appears only on scroll down) -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 w-full backdrop-blur-md bg-zinc-950/95 border-b border-zinc-800 transition-all duration-300 -translate-y-full opacity-0 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center text-zinc-950 font-mono font-bold text-xs">
+          RP
+        </div>
+        <div>
+          <span class="font-bold text-white text-sm tracking-tight block group-hover:text-orange-400 transition-colors">
+            Ramsés Padrón Gentile
+          </span>
+          <span class="text-[10px] font-mono text-zinc-400 block -mt-0.5">
+            Ingeniería en Electrónica
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-zinc-300">
+        <a href="#proyectos" class="hover:text-orange-400 transition-colors">Proyectos</a>
+        <a href="#experiencia" class="hover:text-orange-400 transition-colors">Experiencia</a>
+        <a href="#certificados" class="hover:text-orange-400 transition-colors">Cursos & Certificados</a>
+        <a href="#cvs" class="hover:text-orange-400 transition-colors">Descargar CVs</a>
+        <a href="#contacto" class="hover:text-orange-400 transition-colors">Contacto</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a 
+          href="#cvs" 
+          class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-400 text-zinc-950 transition-colors"
+        >
+          <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
+          Descargar CV
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800" aria-label="Abrir Menú">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-zinc-800 bg-zinc-950 px-4 pt-2 pb-4 space-y-1">
+      <a href="#proyectos" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-300 hover:text-orange-400 hover:bg-zinc-900">Proyectos</a>
+      <a href="#experiencia" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-300 hover:text-orange-400 hover:bg-zinc-900">Experiencia</a>
+      <a href="#certificados" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-300 hover:text-orange-400 hover:bg-zinc-900">Cursos & Certificados</a>
+      <a href="#cvs" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-300 hover:text-orange-400 hover:bg-zinc-900">Descargar CVs</a>
+      <a href="#contacto" class="block px-3 py-2 rounded-lg text-sm font-medium text-zinc-300 hover:text-orange-400 hover:bg-zinc-900">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-16 md:pt-24 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-5">
+          Ramsés Padrón Gentile <br />
+          <span class="text-orange-500">
+            Ingeniería en Electrónica
+          </span>
+        </h1>
+
+        <!-- Description (Personal First-Person Voice) -->
+        <div class="text-base text-zinc-300 leading-relaxed mb-8">
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            ¡Hola! Soy estudiante de Ingeniería en Electrónica con el 100% del cursado aprobado y realizando mi proyecto final de grado. Creé este espacio a modo de CV técnico extendido para recopilar y documentar con detalle los proyectos de electrónica que fui desarrollando durante la carrera (añadiendo sus informes técnicos en PDF), así como un poco de mi vida relacionada al ámbito: cursos, materias electivas, certificaciones y experiencia profesional.
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-3 mb-12">
+          <a 
+            href="#proyectos" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-400 text-zinc-950 font-semibold text-xs sm:text-sm transition-colors"
+          >
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            Ver Proyectos e Informes
+          </a>
+          <a 
+            href="#cvs" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 font-medium text-xs sm:text-sm transition-colors"
+          >
+            <i data-lucide="file-text" class="w-4 h-4 text-orange-400"></i>
+            Descargar CV en PDF
+          </a>
+          <a 
+            href="#contacto" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 font-medium text-xs sm:text-sm transition-colors"
+          >
+            <i data-lucide="mail" class="w-4 h-4 text-zinc-400"></i>
+            Contacto
+          </a>
+        </div>
+
+        <!-- Áreas de Conocimiento y Especialización -->
+        <div>
+          <div class="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-3 font-semibold flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-orange-400"></i> Áreas de Conocimiento Principal
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            
+            <!-- Área 1: Sistemas Embebidos (Rojo Técnico Vivo) -->
+            <div class="p-3.5 rounded-lg bg-zinc-900/80 border border-zinc-800 hover:border-[#ff3b3b]/60 transition-colors">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#ff4444] mb-1.5">
+                <i data-lucide="microchip" class="w-4 h-4 text-[#ff4444]"></i> Sistemas Embebidos
+              </div>
+              <p class="text-xs text-zinc-300 leading-relaxed font-mono">
+                stm32, esp32, Arduino, Raspberry Pi, Protocolos, periféricos, PCBs.
+              </p>
+            </div>
+
+            <!-- Área 2: RF & Microondas (Naranja) -->
+            <div class="p-3.5 rounded-lg bg-zinc-900/80 border border-zinc-800 hover:border-orange-500/50 transition-colors">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-orange-400 mb-1.5">
+                <i data-lucide="radio" class="w-4 h-4"></i> RF & Microondas
+              </div>
+              <p class="text-xs text-zinc-300 leading-relaxed font-mono">
+                Circuitos de RF (filtros, oscilador, divisor), adaptación, antenas y radioenlaces.
+              </p>
+            </div>
+
+            <!-- Área 3: Electricidad, Control e Instrumentación (Amarillo / Ámbar) -->
+            <div class="p-3.5 rounded-lg bg-zinc-900/80 border border-zinc-800 hover:border-amber-500/50 transition-colors">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 mb-1.5">
+                <i data-lucide="zap" class="w-4 h-4"></i> Electricidad, Control e Instrumentación
+              </div>
+              <p class="text-xs text-zinc-300 leading-relaxed font-mono">
+                Instrumental de laboratorio, electricidad, conversores, motores, generadores, transformadores, PWM y control PID.
+              </p>
+            </div>
+
+            <!-- Área 4: Simulación & CAD (Marrón Cálido) -->
+            <div class="p-3.5 rounded-lg bg-zinc-900/80 border border-zinc-800 hover:border-[#c4824e]/60 transition-colors">
+              <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#c4824e] mb-1.5">
+                <i data-lucide="laptop" class="w-4 h-4 text-[#c4824e]"></i> Simulación & CAD
+              </div>
+              <p class="text-xs text-zinc-300 leading-relaxed font-mono">
+                PCB: Altium, Eagle, Proteus. Antenas: AWR, CST, CadFekko. HDL: Vivado, Quartus. Simulación: LT Spice, Matlab.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="proyectos" class="py-16 border-t border-zinc-800 bg-zinc-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 uppercase tracking-wider mb-1.5 font-medium">
+            <i data-lucide="folder-code" class="w-3.5 h-3.5"></i> Proyectos de Carrera y Extensión
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Proyectos Técnicos & Informes
+          </h2>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl leading-relaxed">
+            Proyectos que fui realizando durante la carrera. En cada uno se incluye la finalidad, fotos y su informe completo descargable en PDF.
+          </p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="w-full md:w-72 relative">
+          <i data-lucide="search" class="w-4 h-4 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2"></i>
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Buscar (ej. STM32, VNA, AWR, PCB, CST...)"
+            class="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+          />
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs (Matching main knowledge areas) -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-8 border-b border-zinc-800 pb-3">
+        <button 
+          data-category="all"
+          class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-orange-500 text-zinc-950 border border-orange-500 transition-colors inline-flex items-center gap-1.5"
+        >
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          Todos los proyectos (12)
+        </button>
+        <button 
+          data-category="embebidos"
+          class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-zinc-200 hover:bg-zinc-800 transition-colors inline-flex items-center gap-1.5"
+        >
+          <i data-lucide="microchip" class="w-3.5 h-3.5"></i>
+          Sistemas Embebidos
+        </button>
+        <button 
+          data-category="rf"
+          class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-zinc-200 hover:bg-zinc-800 transition-colors inline-flex items-center gap-1.5"
+        >
+          <i data-lucide="radio" class="w-3.5 h-3.5"></i>
+          RF & Microondas
+        </button>
+        <button 
+          data-category="potencia"
+          class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-zinc-200 hover:bg-zinc-800 transition-colors inline-flex items-center gap-1.5"
+        >
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+          Electricidad, Control e Instrumentación
+        </button>
+        <button 
+          data-category="software"
+          class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-zinc-200 hover:bg-zinc-800 transition-colors inline-flex items-center gap-1.5"
+        >
+          <i data-lucide="laptop" class="w-3.5 h-3.5"></i>
+          Simulación & CAD
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="noResults" class="hidden text-center py-12 bg-zinc-900/50 rounded-xl border border-zinc-800 p-6">
+        <i data-lucide="alert-circle" class="w-8 h-8 text-zinc-500 mx-auto mb-2"></i>
+        <p class="text-sm font-semibold text-white">No se encontraron proyectos</p>
+        <p class="text-xs text-zinc-400 mt-1">Intenta con otro término de búsqueda o selecciona otra categoría.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experiencia Profesional -->
+  <section id="experiencia" class="py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 uppercase tracking-wider mb-1 font-medium">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Trayectoria
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Experiencia Profesional
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm mt-1">
+          Mi experiencia práctica en entornos laborales y actividades formativas.
+        </p>
+      </div>
+
+      <div class="max-w-3xl">
+        
+        <!-- Card 1: PPS en CEV -->
+        <div class="p-5 sm:p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 transition-colors">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-orange-950/50 text-orange-400 border border-orange-800/40">
+              Mayo 2025 – Julio 2025
+            </span>
+            <span class="text-xs text-zinc-400 font-mono">Córdoba, Argentina</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-0.5">
+            Centro de Ensayos en Vuelo (CEV)
+          </h3>
+          <p class="text-xs text-orange-400 font-mono font-medium mb-3.5">
+            Practicante de Práctica Profesional Supervisada (PPS)
+          </p>
+          <ul class="space-y-2.5 text-xs text-zinc-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-orange-400 font-bold mt-0.5">▸</span>
+              <span><strong>Adquisición de Datos & Aviónica:</strong> Instrumentación, antenas y sensores utilizables para el registro de parámetros a tomar durante ensayos en vuelo.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-orange-400 font-bold mt-0.5">▸</span>
+              <span><strong>Informes Técnicos:</strong> Redacción de documentación técnica rigurosa sobre modificaciones realizadas y correspondientes suplementos a los manuales de vuelo (SUV); análisis de los gráficos de señales registradas durante ensayos realizados en vuelo.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-orange-400 font-bold mt-0.5">▸</span>
+              <span><strong>Mantenimiento de Instrumental:</strong> Estudio de normativas IRAM, baterías y sistemas eléctricos de aeronaves; acompañamiento en mantenimiento aeronáutico y ensayos.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos, Seminarios y Certificados -->
+  <section id="certificados" class="py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-8">
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 uppercase tracking-wider mb-1 font-medium">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i> Capacitación
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Cursos, Seminarios & Certificaciones
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm mt-1">
+          Capacitaciones extracurriculares y materias electivas que fui realizando para complementar mi formación, con sus certificados oficiales respaldatorios.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <!-- Cert 1: Inglés B1.2 UNC -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-orange-400 font-semibold">Facultad de Lenguas - UNC</span>
+              <span>120 hs</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Inglés Nivel Cinco (Equivalente B1.2)</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Curso Intensivo virtual de Consolidación y uso de la lengua I (Nivel 5) de Inglés. Equivalente al nivel B1.2 del Marco Común Europeo de Referencia para las Lenguas (MCERL).
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_Ingles_B12_UNC.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+        <!-- Cert 2: Diseño Digital Avanzado -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-[#ff4444] font-semibold">Fundación Fulgor / FCEFyN UNC</span>
+              <span>75 hs</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Diseño Digital Avanzado (HDL & Verilog)</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Fundamentos de lógica digital programable, descripción de hardware en Verilog y síntesis con Vivado.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_Diseno_Digital_Avanzado_Fulgor_UNC.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+        <!-- Cert 3: Desafío Ladder -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-amber-400 font-semibold">IngeLearn</span>
+              <span>12 hs</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Desafío Ladder: Automatización Industrial</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Lógica de programación de PLCs y lenguaje Ladder.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_Automatizacion_Ladder.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+        <!-- Cert 4: NASA Space Apps -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-orange-400 font-semibold">NASA International</span>
+              <span>2025</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">NASA Space Apps Challenge</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Certificado de participación en el hackathon global resolviendo desafíos espaciales (Proyecto Deimos).
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_NASA_Space_Apps_2025.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+        <!-- Cert 5: Seminario Telecomunicaciones -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-orange-400 font-semibold">Facultad de Ingeniería</span>
+              <span>16 hs</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Tendencias en Telecomunicaciones</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Seminario sobre tecnologías emergentes, comunicaciones satelitales, redes móviles y espectro radioeléctrico.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_Seminario_Telecomunicaciones.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+        <!-- Cert 6: MATLAB Onramp -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+              <span class="text-amber-400 font-semibold">MathWorks</span>
+              <span>Oficial</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">MATLAB Onramp Certificate</h3>
+            <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
+              Fundamentos básicos de análisis numérico, matrices y visualización de datos en MATLAB.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/certificados/Certificado_Matlab_Onramp.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Ver Certificado Oficial (PDF)
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Otros Cursos y Materias Electivas -->
+      <div class="mt-6 p-4 rounded-xl bg-zinc-900/60 border border-zinc-800">
+        <h4 class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-2.5 font-semibold">
+          Otros Cursos, Electivas Universitarias & Talleres Realizados:
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-zinc-300 font-mono">
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Adquisición Electrónica de Datos (Seminario 8hs)</div>
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Procesamiento Digital de Señales en C / Raspberry (60hs)</div>
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Sistemas de Radioenlaces / Radiomobile (45hs)</div>
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Ingeniería de Protocolos / CISCO Packet Tracer (25hs)</div>
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Taller de Microsoldadura y Normas IPC (CONAE)</div>
+          <div class="flex items-center gap-1.5"><span class="text-orange-400">▸</span> Argentina Programa 4.0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descarga de CVs (Ubicada al final, antes de contacto) -->
+  <section id="cvs" class="py-16 border-t border-zinc-800 bg-zinc-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-8">
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 uppercase tracking-wider mb-1 font-medium">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Descarga de Currículums
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Currículums en PDF
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm mt-1">
+          Podés descargar mi CV principal con la visión integradora de mi formación y proyectos, o las versiones con énfasis específico según el área técnica del puesto.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- CV 1: Principal / General (Destacado) -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-orange-500/50 flex flex-col justify-between relative">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-orange-500 text-zinc-950 flex items-center justify-center font-bold text-xs mb-3">
+              CV
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">CV Principal (General)</h3>
+            <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+              Visión completa e integradora de mi formación.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/cv/CV_Ramses_Padron_Principal.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold rounded-lg bg-orange-500 hover:bg-orange-400 text-zinc-950 transition-colors"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar PDF
+          </a>
+        </div>
+
+        <!-- CV 2: Hardware & HDL -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-[#3b1111]/80 text-[#ff4444] border border-[#ff3b3b]/40 flex items-center justify-center font-bold text-xs mb-3">
+              HDL
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Hardware & HDL / Embebidos</h3>
+            <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+              Enfocado a diseño digital, sistemas embebidos y diseño circuital.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/cv/CV_Ramses_Padron_Hardware_HDL.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar PDF
+          </a>
+        </div>
+
+        <!-- CV 3: Electricidad, Control & Industria -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-amber-950/60 text-amber-400 border border-amber-800/40 flex items-center justify-center font-bold text-xs mb-3">
+              IND
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Electricidad, Control & Industria</h3>
+            <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+              Orientado a electrónica de potencia, electricidad, automatización y PLC.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/cv/CV_Ramses_Padron_Potencia_Control.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar PDF
+          </a>
+        </div>
+
+        <!-- CV 4: Telecomunicaciones & Redes -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-orange-950/60 text-orange-400 border border-orange-800/40 flex items-center justify-center font-bold text-xs mb-3">
+              RF
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Telecom, Redes & RF</h3>
+            <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+              Enfocado en radiofrecuencia, radioenlaces, antenas y redes.
+            </p>
+          </div>
+          <a 
+            href="assets/docs/cv/CV_Ramses_Padron_Telecom_Redes.pdf" 
+            target="_blank" 
+            class="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition-colors"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar PDF
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <section id="contacto" class="py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 uppercase tracking-wider mb-1.5 font-medium">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i> Contacto Directo
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-2">
+          ¿Te interesa mi perfil para sumarme a tu equipo?
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-8 max-w-xl mx-auto">
+          Estoy en búsqueda de oportunidades para dar mis primeros pasos profesionales e incorporarme a un equipo de trabajo, tanto en el sector tecnológico, como energético o eléctrico/industrial. Si contás con una vacante abierta para alguien proactivo, con buena base técnica, capacidad analítica, con muchas ganas de aprender y de aportar su conocimiento, te invito a escribirme para que conversemos.
+        </p>
+
+        <!-- Contact Links -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+          <a 
+            href="mailto:ramsespg13@gmail.com" 
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-400 text-zinc-950 font-semibold text-xs transition-colors"
+          >
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            ramsespg13@gmail.com
+          </a>
+          <a 
+            href="https://wa.me/5493541675281" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700 text-zinc-200 font-medium text-xs hover:bg-zinc-800 hover:text-white transition-colors"
+          >
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-white"></i>
+            +54 9 3541 675281
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/ramsés-exequiel-padrón-gentile-b54015253/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700 text-zinc-200 font-medium text-xs hover:bg-zinc-800 hover:text-white transition-colors"
+          >
+            <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="text-xs text-zinc-500 font-mono">
+          Villa Carlos Paz, Córdoba, Argentina • Ramsés Exequiel Padrón Gentile
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 border-t border-zinc-800 bg-zinc-950 text-center text-xs text-zinc-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Ramsés Padrón Gentile — Portfolio & CV Técnico.</p>
+      <p class="font-mono text-zinc-400">Ingeniería en Electrónica • Córdoba, Argentina</p>
+    </div>
+  </footer>
+
+  <!-- Modal Project Details -->
+  <div id="projectModal" class="hidden fixed inset-0 z-50 bg-zinc-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-3xl rounded-xl bg-zinc-900 border border-zinc-800 p-6 sm:p-7 my-8 max-h-[90vh] overflow-y-auto">
+      <!-- Close Button -->
+      <button 
+        id="closeModalBtn"
+        class="absolute top-4 right-4 p-1.5 rounded-lg bg-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-700 transition-colors"
+        aria-label="Cerrar modal"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Dynamic Content -->
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="hidden fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-sm flex flex-col items-center justify-center p-4">
+    <button 
+      id="closeLightboxBtn"
+      class="absolute top-4 right-4 p-2 rounded-lg bg-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-700 transition-colors"
+      aria-label="Cerrar imagen"
+    >
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div class="max-w-4xl max-h-[80vh] flex items-center justify-center">
+      <img id="lightboxImg" src="" alt="Ampliación" class="max-w-full max-h-[75vh] object-contain rounded-lg border border-zinc-800" />
+    </div>
+    <p id="lightboxCaption" class="text-xs text-zinc-300 font-mono mt-3 text-center px-4 max-w-2xl"></p>
+  </div>
+
+  <!-- Projects Data & Script -->
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
