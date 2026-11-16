@@ -51,20 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // Category badge color helper (Clean solid subtle tints without glow)
+  // Category badge color helper (Unified Orange Accent)
   function getBadgeClasses(category) {
-    switch (category) {
-      case 'potencia':
-        return 'bg-amber-950/40 text-amber-300 border-amber-600/30';
-      case 'rf':
-        return 'bg-orange-950/40 text-orange-300 border-orange-600/30';
-      case 'embebidos':
-        return 'bg-[#3b1111]/80 text-[#ff5555] border-[#ff3b3b]/40';
-      case 'software':
-        return 'bg-[#2e1d13]/80 text-[#d49b6a] border-[#a06235]/50';
-      default:
-        return 'bg-orange-950/40 text-orange-300 border-orange-600/30';
-    }
+    return 'bg-orange-950/40 text-orange-300 border-orange-600/30';
   }
 
   // Render Projects
