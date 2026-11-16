@@ -13,4 +13,4 @@ Sitio web personal y portfolio de ingeniería desarrollado por **Ramsés Padrón
 - **Descarga de CVs:** CV Principal y versiones específicas por perfil técnico.
 
 ## Publicación
-Desplegado con [GitHub Pages](https://moisespg13.github.io/Rams-s-Padr-n-CV/).
+Desplegado con [GitHub Pages](https://moisespg13.github.io/ramses-padron-gentile/).
