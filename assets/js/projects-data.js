@@ -401,38 +401,42 @@ window.PROJECTS_DATA = [
     "subject": "Electrónica III",
     "authors": "Padrón Ramsés, Bronenberg Pedro",
     "pdfFile": "assets/docs/rf-oscilador-colpitts.pdf",
-    "summary": "Cálculo analítico, simulación circuital, diseño de PCB en FR-4, fabricación física y caracterización de un oscilador senoidal de radiofrecuencia en topología Colpitts para la banda de VHF (~220 MHz).",
+    "summary": "Diseño en AWR Design Environment, simulación circuital y fabricación física en sustrato FR-4 de un oscilador Colpitts de RF para operar a 200 MHz utilizando un transistor BFS17A.",
     "highlights": [
-      "Diseño de circuito tanque resonante LC con divisor capacitivo de realimentación (C1 / C2) para banda VHF",
-      "Verificación matemática del criterio de oscilación de Barkhausen a lazo abierto y cerrado",
-      "Simulación circuital para análisis armónico, estabilidad de frecuencia y verificación de nivel de salida",
-      "Fabricación física del PCB en placa FR-4 y soldado de componentes de montaje para alta frecuencia",
-      "Ensayos y verificación de punto de polarización DC (Vce real vs simulado) y frecuencia de oscilación"
+      "Diseño del circuito oscilador en AWR Design Environment para operar a una frecuencia de 200 MHz en banda VHF",
+      "Polarización en continua del transistor BFS17A para un punto de trabajo de Vce = 5V e Ic = 2mA con fuente de 10V",
+      "Simulación a lazo abierto en AWR con ganancia de 7.6 dB y cambio de fase en 200 MHz en el test de oscilación",
+      "Simulación a lazo cerrado con análisis espectral (pico en 223.6 MHz) y señal senoidal temporal de salida (218.6 MHz, Vpp > 1V)",
+      "Diseño del layout en AWR, fabricación física del circuito en placa FR-4 y verificación de polarización DC con multímetro (Vce = 4.68V)"
     ],
     "specs": [
       {
-        "label": "Topología de Circuito",
-        "val": "Oscilador Colpitts a transistor BJT de RF"
+        "label": "Transistor de RF",
+        "val": "BFS17A (BJT para VHF)"
       },
       {
-        "label": "Frecuencia de Oscilación",
-        "val": "218 MHz - 223 MHz (Banda VHF)"
+        "label": "Frecuencia de Operación",
+        "val": "200 MHz (diseño) / 218.6 MHz (simulación temporal)"
       },
       {
-        "label": "Red Resonante",
-        "val": "Tanque LC con divisor capacitivo C1/C2"
+        "label": "Polarización DC",
+        "val": "Vce = 5V, Ic = 2mA (Alimentación: 10V)"
       },
       {
-        "label": "Sustrato de Placa",
-        "val": "FR-4 con plano de masa para RF"
+        "label": "Topología",
+        "val": "Oscilador Colpitts (Tanque LC)"
       },
       {
-        "label": "Software de Simulación",
-        "val": "Software de simulación y diseño de RF"
+        "label": "Software EDA",
+        "val": "AWR Design Environment (circuito, simulación y layout)"
+      },
+      {
+        "label": "Sustrato PCB",
+        "val": "FR-4 con componentes soldados"
       },
       {
         "label": "Instrumental",
-        "val": "Multímetro digital, fuente de alimentación continua, osciloscopio"
+        "val": "Multímetro digital y fuente de alimentación CC"
       }
     ],
     "tags": [
@@ -444,23 +448,35 @@ window.PROJECTS_DATA = [
       "AWR"
     ],
     "heroImage": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
-    "galleryTitle": "Circuito Fabricado y Simulaciones",
+    "galleryTitle": "Diseño, Layout y Simulaciones en AWR",
     "gallery": [
       {
-        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
-        "caption": "Circuito oscilador Colpitts de RF fabricado en placa FR-4 con componentes soldados"
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p4_5.png",
+        "caption": "Diseño del circuito a lazo abierto en AWR"
       },
       {
-        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_18.png",
-        "caption": "Detalle del montaje físico del circuito tanque LC y transistor de RF"
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p5_7.png",
+        "caption": "Simulación de módulo y fase a lazo abierto en AWR"
+      },
+      {
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p5_8.png",
+        "caption": "Diseño del circuito a lazo cerrado en AWR"
       },
       {
         "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p6_10.png",
-        "caption": "Simulación a lazo cerrado y análisis del espectro armónico (pico en 223.6 MHz)"
+        "caption": "Simulación de espectro a lazo cerrado en AWR"
       },
       {
         "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p7_14.png",
-        "caption": "Simulación temporal de la señal senoidal de salida de RF (218.6 MHz)"
+        "caption": "Simulación temporal de la señal senoidal de salida en AWR (218.6 MHz)"
+      },
+      {
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p7_15.png",
+        "caption": "Layout del Oscilador en AWR"
+      },
+      {
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
+        "caption": "Oscilador fabricado en placa FR-4"
       }
     ]
   },
