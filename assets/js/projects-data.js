@@ -275,24 +275,32 @@ window.PROJECTS_DATA = [
     "galleryTitle": "Placa Fabricada, Simulación 3D y Mediciones",
     "gallery": [
       {
-        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_10.jpeg",
-        "caption": "Filtro microstrip fabricado en sustrato FR-4 con conectores coaxiales SMA"
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p6_4.png",
+        "caption": "Filtro en MATLAB"
       },
       {
         "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p7_6.png",
-        "caption": "Modelado electromagnético tridimensional del filtro en CST Studio Suite"
+        "caption": "Filtro en CST"
       },
       {
         "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p7_7.png",
-        "caption": "Simulación de pérdidas de retorno S11 en CST Studio Suite"
+        "caption": "Medición en CST"
       },
       {
-        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p9_11.jpeg",
-        "caption": "Primera medición del parámetro S11 en Analizador de Redes Vectorial (VNA)"
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_9.png",
+        "caption": "Filtro sin los SMA"
       },
       {
-        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p9_12.jpeg",
-        "caption": "Segunda medición de S11 en VNA con calibración fina centrada en 2.35 GHz"
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_10.jpeg",
+        "caption": "Filtro con los conectores (sostenido con la mano)"
+      },
+      {
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p10_13.jpeg",
+        "caption": "1ra medición con el VNA"
+      },
+      {
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p10_14.jpeg",
+        "caption": "2da medición con el VNA"
       }
     ]
   },
