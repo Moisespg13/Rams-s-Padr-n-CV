@@ -9,134 +9,138 @@ window.PROJECTS_DATA = [
     "subject": "Desafío Internacional 'Meteor Madness'",
     "authors": "Padrón Gentile Ramsés, Sosa Tomás, Espinosa Leonel, Farraté Milagros, Vesco Genaro",
     "pdfFile": "assets/docs/nasa-space-apps-deimos-simulator.pdf",
-    "summary": "Plataforma web interactiva desarrollada para el hackathon internacional de la NASA, que simula órbitas de asteroides cercanos a la Tierra (NEOs/PHAs) y calcula física de impacto.",
+    "summary": "Plataforma web interactiva desarrollada para el hackathon internacional de la NASA, grafica órbitas de asteroides cercanos a la Tierra (NEOs/PHAs) y calcula consecuencias de impacto en una zona seleccionada.",
     "highlights": [
-      "Integración de datos en tiempo real desde la API del Small-Body Database (SBDB) del JPL/NASA",
-      "Visualizador interactivo 3D del sistema solar y propagación de órbitas de asteroides",
-      "Motor de física de impacto: cálculo de energía cinética liberada, diámetro de cráter y onda de choque",
-      "Selector interactivo de punto de impacto sobre mapa terrestre interactivo",
-      "Desarrollo de software y modelado de datos para concientización pública y divulgación científica"
+      "Integración directa con las APIs abiertas de NASA JPL: Small-Body Database Query (SBDB Query) y SBDB API",
+      "Visualizador 3D para graficar la órbita del asteroide seleccionado junto a las órbitas de los planetas interiores",
+      "Física de impactos: cálculo de energía cinética liberada, diámetro de cráter, radiación térmica y efectos sísmicos según distancia",
+      "Selector sobre mapa terrestre para simular la zona de impacto y estimar consecuencias",
+      "Visualización interactiva y análisis educativo de parámetros orbitales de asteroides potencialmente peligrosos (PHAs)"
     ],
     "specs": [
       {
-        "label": "Evento",
-        "val": "NASA Space Apps Challenge"
+        "label": "Front-End",
+        "val": "React, Tailwind CSS, TypeScript, Vite"
       },
       {
-        "label": "Equipo",
-        "val": "AstroIUA"
+        "label": "Back-End",
+        "val": "Python, FastAPI, Pandas, NumPy"
       },
       {
-        "label": "Datos",
-        "val": "NASA JPL Small-Body Database (SBDB)"
+        "label": "APIs de Datos",
+        "val": "NASA JPL Small-Body Database (SBDB Query & SBDB API)"
       },
       {
-        "label": "Modelado",
-        "val": "Mecánica orbital, Física de colisiones planetarias"
+        "label": "Simulación",
+        "val": "Cálculo orbital y estimación de consecuencias de impacto en la Tierra"
+      },
+      {
+        "label": "Entorno & Herramientas",
+        "val": "VS Code, Node.js"
       }
     ],
     "tags": [
       "NASA Hackathon",
-      "Astrofísica",
-      "Mecánica Orbital",
-      "Simulación Web",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
       "APIs NASA JPL",
       "Física de Impactos"
     ],
     "heroImage": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p4_5.png",
+    "galleryTitle": "Capturas de la Interfaz y Simulación",
     "gallery": [
       {
         "src": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p4_5.png",
-        "caption": "Pantalla principal de Deimos: visualizador interactivo del sistema solar"
+        "caption": "Pantalla principal de Deimos"
       },
       {
         "src": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p3_4.png",
-        "caption": "Visualizador 3D de órbitas de asteroides potencialmente peligrosos (PHAs)"
+        "caption": "Visualizador 3D de órbitas del sistema de solar y del asteroide seleccionado"
       },
       {
         "src": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p4_6.png",
-        "caption": "Simulación y selección de coordenadas de impacto terrestre"
+        "caption": "Creación/Selección de asteroide y zona de impacto"
       },
       {
         "src": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p5_7.png",
-        "caption": "Cálculo de consecuencias físicas: cráter, radiación térmica y sismicidad"
+        "caption": "Resultados de consecuencias físicas"
+      },
+      {
+        "src": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p7_8.png",
+        "caption": "Resultados de población y daños"
       }
     ]
   },
   {
     "id": "stm32-wavegenerator",
-    "title": "Generador de Ondas de Funciones con STM32 ARM Cortex-M",
+    "title": "Generador de Ondas en STM32",
     "category": "embebidos",
     "categoryLabel": "Sistemas Embebidos",
     "date": "Febrero 2025",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Circuitos Digitales III",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/stm32-generador-ondas.pdf",
-    "summary": "Desarrollo completo de un generador de funciones digital programable con microcontrolador STM32F072B Discovery, display LCD 16x2 y controles analógicos en tiempo real para la cátedra de Circuitos Digitales III.",
+    "summary": "Desarrollo completo de un generador de ondas programado en lenguaje C sobre un microcontrolador STM32, con Display y controles analógicos en tiempo real para seleccionar tipo de onda, amplitud y frecuencia.",
     "highlights": [
-      "Síntesis digital directa de señales analógicas (Senoidal, Triangular, Cuadrada) usando DAC interno de 12 bits y Timers",
-      "Muestreo de potenciómetros mediante ADC para control continuo y suave de frecuencia y amplitud",
-      "Desarrollo de librería de interfaz de bajo nivel para display alfanumérico LCD 16x2 en C",
-      "Calibración de linealidad y corrección matemática de errores en frecuencia y amplitud",
-      "Fabricación de placa de expansión con pulsadores, potenciómetros y conectores de salida"
+      "Realización digital de señales mediante timers y cálculo matemático para síntesis de formas de onda (senoidal, triangular y cuadrada)",
+      "Calibración de linealidad y corrección matemática de errores en frecuencia y amplitud con ajuste lineal",
+      "Control analógico en tiempo real mediante muestreo con ADC de potenciómetros para frecuencia y amplitud",
+      "Comunicación por protocolo I2C con display LCD 16x2 para visualización instantánea de parámetros",
+      "Fabricación en placa experimental con conexionado de pulsador, potenciómetros y bornes de salida soldados"
     ],
     "specs": [
       {
         "label": "Microcontrolador",
-        "val": "STM32F072B (ARM Cortex-M0)"
+        "val": "STM32F072B Discovery (ARM Cortex-M0)"
       },
       {
-        "label": "Periféricos clave",
-        "val": "DAC 12-bit, Timers de alta resolución, ADC, GPIO"
+        "label": "Periféricos & Protocolos",
+        "val": "DAC 12-bit, Timers (TIM6), ADC, GPIO, bus I2C"
       },
       {
-        "label": "Formas de onda",
-        "val": "Senoidal, Triangular, Cuadrada"
+        "label": "Componentes",
+        "val": "Display LCD 16x2 con adaptador I2C, 2x potenciómetros, pulsador, placa experimental"
       },
       {
-        "label": "Interfaz de usuario",
-        "val": "Display LCD 16x2 + 2x Potenciómetros + Pulsador"
+        "label": "Lenguaje & Firmware",
+        "val": "Lenguaje C, librerías STM32 HAL"
       },
       {
-        "label": "Lenguaje & Herramientas",
-        "val": "Lenguaje C / STM32CubeIDE / Osciloscopio"
+        "label": "Software & Herramientas",
+        "val": "STM32CubeIDE, Excel (calibración), Osciloscopio y equipo de soldadura de estaño"
       }
     ],
     "tags": [
       "STM32",
-      "ARM Cortex",
+      "ARM Cortex-M0",
       "Lenguaje C",
-      "DAC & ADC",
+      "DAC 12-bit",
+      "Timers",
+      "I2C",
       "LCD 16x2",
-      "Firmware",
       "Osciloscopio"
     ],
     "heroImage": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p15_15.jpeg",
+    "galleryTitle": "Prototipo y Señales en Osciloscopio",
     "gallery": [
       {
         "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p15_15.jpeg",
-        "caption": "Sistema completo funcionando con la placa STM32, display y controles"
-      },
-      {
-        "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p14_13.jpeg",
-        "caption": "Detalle del conexionado y placa de expansión cableada"
-      },
-      {
-        "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p11_10.jpeg",
-        "caption": "Interfaz LCD 16x2 mostrando onda, amplitud y frecuencia en tiempo real"
+        "caption": "Proyecto completo: placa STM32F072B con display LCD, controles analógicos y cableado"
       },
       {
         "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p6_2.jpeg",
-        "caption": "Onda cuadrada sintetizada en DAC capturada en osciloscopio"
+        "caption": "Onda cuadrada a la salida del DAC medida en osciloscopio"
       },
       {
         "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p6_3.jpeg",
-        "caption": "Onda triangular a la salida del DAC"
+        "caption": "Onda triangular a la salida del DAC medida en osciloscopio"
       },
       {
         "src": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p6_4.jpeg",
-        "caption": "Onda senoidal con alta pureza espectral"
+        "caption": "Onda senoidal a la salida del DAC medida en osciloscopio"
       }
     ]
   },
@@ -146,38 +150,42 @@ window.PROJECTS_DATA = [
     "category": "embebidos",
     "categoryLabel": "Sistemas Embebidos",
     "date": "Diciembre 2024",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Procesamiento Digital de Señales",
     "authors": "Padrón Ramsés, Bronenberg Pedro",
     "pdfFile": "assets/docs/dsp-filtro-audio-fir.pdf",
-    "summary": "Sistema embebido de procesamiento de señales de audio en tiempo real implementando un filtro digital FIR en lenguaje C sobre Raspberry Pi, con etapas analógicas antialias y de reconstrucción.",
+    "summary": "Diseño, cálculo y programación en lenguaje C de un filtro digital FIR pasa-banda de audio (350 Hz - 3000 Hz) en tiempo real sobre Raspberry Pi 3, incluyendo etapas analógicas antialias y de reconstrucción.",
     "highlights": [
-      "Diseño y cálculo analítico de filtro digital FIR pasa-banda para voz humana (350 Hz - 3000 Hz)",
-      "Acondicionamiento de señal con filtro analógico Antialias activo Sallen-Key diseñado en LTSpice",
-      "Implementación de algoritmo de convolución discreta optimizado en C sobre Linux embebido",
-      "Filtrado y eliminación de ruido fuera de banda audible en tiempo real",
-      "Validación en laboratorio con generador de funciones, osciloscopio y análisis espectral"
+      "Cálculo analítico y síntesis de coeficientes para filtro digital FIR pasa-banda de voz (350 Hz - 3000 Hz) mediante T-Filter",
+      "Diseño, simulación y montaje de etapa analógica antialias activa pasabajos (Fc = 4 kHz) en LTspice",
+      "Implementación del algoritmo de convolución discreta en lenguaje C sobre Linux embebido en Raspberry Pi 3",
+      "Acondicionamiento y filtrado de señal de audio en tiempo real con adquisición por tarjeta USB y driver ALSA",
+      "Validación experimental en laboratorio mediante generador de funciones y osciloscopio digital"
     ],
     "specs": [
       {
-        "label": "Plataforma",
-        "val": "Raspberry Pi (Linux Embebido) en C"
+        "label": "Plataforma de Cómputo",
+        "val": "Raspberry Pi 3 Model B (Linux / Raspberry Pi OS)"
       },
       {
-        "label": "Tipo de Filtro",
-        "val": "FIR Pasa-Banda (350 Hz - 3000 Hz)"
+        "label": "Hardware de Audio",
+        "val": "Tarjeta de audio USB (ADC/DAC de audio, driver ALSA)"
       },
       {
-        "label": "Etapa de Entrada",
-        "val": "Micrófono + Filtro Antialias activo Sallen-Key"
+        "label": "Etapas Analógicas",
+        "val": "Filtro antialias activo (Fc = 4 kHz) y filtro de reconstrucción"
       },
       {
-        "label": "Etapa de Salida",
-        "val": "Filtro de reconstrucción + Amplificador + Parlante"
+        "label": "Algoritmo DSP",
+        "val": "Filtro digital FIR pasa-banda (350 Hz - 3000 Hz)"
       },
       {
-        "label": "Validación",
-        "val": "LTSpice, Osciloscopio, Analizador de Espectro"
+        "label": "Lenguaje & Software",
+        "val": "Lenguaje C (GCC), T-Filter, LTspice"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Generador de funciones y osciloscopio digital"
       }
     ],
     "tags": [
@@ -186,30 +194,31 @@ window.PROJECTS_DATA = [
       "Raspberry Pi",
       "Lenguaje C",
       "Audio en Tiempo Real",
-      "LTSpice",
-      "Sallen-Key"
+      "LTspice",
+      "Osciloscopio"
     ],
-    "heroImage": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p6_4.jpeg",
+    "heroImage": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p5_2.png",
+    "galleryTitle": "Diseño y Validaciones en Laboratorio",
     "gallery": [
       {
+        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p5_2.png",
+        "caption": "Diseño de respuesta en frecuencia y coeficientes del filtro FIR en T-Filter"
+      },
+      {
+        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p6_3.png",
+        "caption": "Esquemático del filtro antialias analógico activo en LTspice"
+      },
+      {
         "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p6_4.jpeg",
-        "caption": "Prototipo de la etapa analógica antialias y acondicionamiento en protoboard"
-      },
-      {
-        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p10_17.jpeg",
-        "caption": "Montaje de pruebas del sistema DSP completo en laboratorio"
-      },
-      {
-        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p7_6.jpeg",
-        "caption": "Medición de respuesta en frecuencia con generador de señales y osciloscopio"
-      },
-      {
-        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p7_7.jpeg",
-        "caption": "Verificación de atenuación en banda de rechazo"
+        "caption": "Medición en osciloscopio del filtro antialias para frecuencias menores a la de corte Fc"
       },
       {
         "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p11_19.jpeg",
-        "caption": "Comportamiento del filtro de audio en el rango 350Hz - 2300Hz"
+        "caption": "Medición en osciloscopio del sistema completo en banda de paso (350 Hz - 2300 Hz)"
+      },
+      {
+        "src": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p10_17.jpeg",
+        "caption": "Medición en osciloscopio del filtrado y atenuación en frecuencias fuera de banda (< 350 Hz)"
       }
     ]
   },
@@ -219,70 +228,75 @@ window.PROJECTS_DATA = [
     "category": "rf",
     "categoryLabel": "RF & Microondas",
     "date": "Noviembre 2024",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Microondas",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/microondas-filtro-lineas-acopladas.pdf",
-    "summary": "Diseño, simulación electromagnética 3D en CST Studio Suite y MATLAB, fabricación física en PCB FR-4 y caracterización con Analizador de Redes Vectorial (VNA) para la cátedra de Microondas.",
+    "summary": "Diseño analítico, cálculo en MATLAB, simulación electromagnética 3D en CST Studio Suite, fabricación física en PCB FR-4 y caracterización con Analizador de Redes Vectorial (VNA) de un filtro pasabanda de microondas.",
     "highlights": [
-      "Diseño analítico de filtro pasabanda de orden 3 con impedancias de modo par e impar",
-      "Cálculo y optimización de dimensiones geométricas de líneas acopladas en MATLAB RF Toolbox",
-      "Modelado electromagnético 3D y simulación de parámetros S (S11 reflexión y S21 transmisión) en CST Studio Suite",
-      "Fabricación física en circuito impreso sustrato FR-4 con conectores coaxiales SMA de 50Ω",
-      "Medición experimental en laboratorio con Analizador de Redes Vectorial (VNA) y Analizador de Espectros"
+      "Diseño analítico de filtro pasabanda de líneas acopladas paralelas de orden N = 3 para 2.4 GHz",
+      "Cálculo de impedancias de modo par e impar (Z0e, Z0o) y dimensiones microstrip con MATLAB RF Toolbox",
+      "Modelado electromagnético tridimensional y simulación de parámetros de dispersión S11 y S21 en CST Studio Suite",
+      "Fabricación física en placa de circuito impreso FR-4 con plano de masa y soldadura de conectores coaxiales SMA",
+      "Caracterización experimental con Analizador de Redes Vectorial (VNA), verificando frecuencia de resonancia en 2.35 GHz"
     ],
     "specs": [
       {
-        "label": "Frecuencia Central (f0)",
-        "val": "2.4 GHz (Banda ISM)"
+        "label": "Frecuencia Central",
+        "val": "2.4 GHz (Banda ISM) - Medida: 2.35 GHz"
       },
       {
-        "label": "Orden del Filtro",
-        "val": "Orden 3 (Chebyshev / Par-Impar)"
+        "label": "Topología Microstrip",
+        "val": "Líneas paralelas acopladas canónicas (Orden N = 3)"
       },
       {
-        "label": "Sustrato",
-        "val": "FR-4 (εr=4.4, h=1.6mm)"
+        "label": "Sustrato PCB",
+        "val": "FR-4 (εr = 4.4, espesor h = 1.6 mm)"
       },
       {
-        "label": "Impedancia de puertos",
-        "val": "50 Ω (Conectores SMA)"
+        "label": "Conectores & Puertos",
+        "val": "Conectores SMA hembra de 50 Ω"
       },
       {
-        "label": "Herramientas",
-        "val": "CST Studio Suite, MATLAB RF, VNA"
+        "label": "Software EDA / CAD",
+        "val": "CST Studio Suite (3D EM), MATLAB RF Toolbox"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Analizador de Redes Vectorial (VNA) y Analizador de Espectros"
       }
     ],
     "tags": [
-      "Microondas",
-      "Líneas Microstrip",
+      "Microondas 2.4GHz",
+      "Líneas Acopladas",
+      "Microstrip",
       "CST Studio Suite",
-      "MATLAB RF Toolbox",
+      "MATLAB RF",
       "VNA",
-      "Analizador de Espectro",
       "FR-4"
     ],
     "heroImage": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_10.jpeg",
+    "galleryTitle": "Placa Fabricada, Simulación 3D y Mediciones",
     "gallery": [
       {
         "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_10.jpeg",
-        "caption": "Filtro de microstrip fabricado en placa FR-4 con conectores SMA"
+        "caption": "Filtro microstrip fabricado en sustrato FR-4 con conectores coaxiales SMA"
       },
       {
-        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p6_4.png",
-        "caption": "Modelado y simulación electromagnética 3D en CST Studio Suite"
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p7_6.png",
+        "caption": "Modelado electromagnético tridimensional del filtro en CST Studio Suite"
+      },
+      {
+        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p7_7.png",
+        "caption": "Simulación de pérdidas de retorno S11 en CST Studio Suite"
       },
       {
         "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p9_11.jpeg",
-        "caption": "Medición de coeficiente de reflexión S11 en Analizador de Redes Vectorial (VNA)"
+        "caption": "Primera medición del parámetro S11 en Analizador de Redes Vectorial (VNA)"
       },
       {
         "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p9_12.jpeg",
-        "caption": "Segunda medición de parámetros S en el laboratorio de RF"
-      },
-      {
-        "src": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p10_13.jpeg",
-        "caption": "Medición de respuesta en frecuencia en Analizador de Espectros"
+        "caption": "Segunda medición de S11 en VNA con calibración fina centrada en 2.35 GHz"
       }
     ]
   },
@@ -292,77 +306,75 @@ window.PROJECTS_DATA = [
     "category": "potencia",
     "categoryLabel": "Electricidad, Control e Instrumentación",
     "date": "Octubre 2024",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Electrónica de Potencia",
     "authors": "Padrón Ramsés, Bronenberg Pedro",
     "pdfFile": "assets/docs/potencia-conversor-dcdc.pdf",
-    "summary": "Diseño, cálculo analítico, simulación y fabricación física de un convertidor conmutado elevador DC/DC de 24V a 48V en topología Push-Pull con control de lazo cerrado para la cátedra de Electrónica de Potencia.",
+    "summary": "Diseño, cálculo analítico, bobinado de componentes magnéticos, simulación circuital, ruteo de PCBs en Altium Designer y fabricación física de un conversor conmutado elevador Push-Pull regulado con integrado SG3525.",
     "highlights": [
-      "Cálculo y bobinado manual de transformador de potencia toroidal con núcleo de ferrita",
-      "Cálculo y diseño de bobina de choque e inductancia de filtrado para corriente continua",
-      "Diseño completo del PCB en software EDA y fabricación física de la placa",
-      "Generador de modulación PWM y circuito de realimentación para regulación precisa de tensión",
-      "Ensayos experimentales con cargas resistivas de 92Ω y 46Ω, y variaciones de entrada de 19V a 29V"
+      "Cálculo y bobinado manual de transformador elevador Push-Pull en núcleo de ferrita tipo E E25/13/7 con toma media",
+      "Diseño y bobinado manual de inductor de filtro de salida (bobina de choque) en núcleo de ferrita E20/10/6",
+      "Diseño de esquemáticos y layout de PCBs en Altium Designer, con fabricación en placas de FR4",
+      "Implementación de control PWM con integrado SG3525 y lazo cerrado de regulación de tensión con amplificador de error",
+      "Ensayos en laboratorio bajo carga nominal de 46 Ω (~50 W) y 92 Ω, con variaciones de entrada de 19V a 29V"
     ],
     "specs": [
       {
-        "label": "Topología",
-        "val": "Push-Pull aislada de potencia"
+        "label": "Topología Conmutada",
+        "val": "Conversor Push-Pull elevador aislado"
       },
       {
-        "label": "Tensión de Entrada (Vin)",
-        "val": "24 VDC (rango dinámico 19V - 29V)"
+        "label": "Circuito de Control",
+        "val": "Modulador PWM SG3525 con amplificador de error diferencial"
       },
       {
-        "label": "Tensión de Salida (Vout)",
-        "val": "48 VDC regulada"
+        "label": "Componentes Magnéticos",
+        "val": "Transformador en núcleo E25/13/7 e inductor de filtro en núcleo E20/10/6"
       },
       {
-        "label": "Control",
-        "val": "PWM con lazo de realimentación"
+        "label": "Tensiones de Trabajo",
+        "val": "Entrada: 19V - 29V DC (Nominal 24V) | Salida: 48V DC regulada"
       },
       {
-        "label": "Carga de ensayo",
-        "val": "46 Ω / 92 Ω (potencia nominal comprobada)"
+        "label": "Software EDA / CAD",
+        "val": "Altium Designer (esquemático y ruteo de PCB)"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Osciloscopio digital, fuente de alimentación continua, banco de cargas"
       }
     ],
     "tags": [
       "Electrónica de Potencia",
       "Topología Push-Pull",
-      "Diseño PCB",
-      "Transformadores de Ferrita",
+      "SG3525",
+      "Altium Designer",
+      "Transformador Ferrita",
       "Control PWM",
       "Osciloscopio"
     ],
     "heroImage": "assets/images/projects/potencia-dcdc/potencia-dcdc-p9_5.jpeg",
+    "galleryTitle": "Prototipo, PCB y Mediciones en Laboratorio",
     "gallery": [
       {
         "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p9_5.jpeg",
-        "caption": "Placa PCB fabricada con transformador y componentes montados"
-      },
-      {
-        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p19_35.jpeg",
-        "caption": "Banco de ensayos en laboratorio con fuentes y cargas resistivas"
-      },
-      {
-        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p19_36.jpeg",
-        "caption": "Montaje del convertidor y medición con instrumental"
-      },
-      {
-        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p18_31.jpeg",
-        "caption": "Medición de señales de conmutación PWM y tensión en osciloscopio"
-      },
-      {
-        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p18_33.jpeg",
-        "caption": "Forma de onda de salida y rizado bajo carga de 46Ω"
+        "caption": "Placa PCB de potencia fabricada en FR-4 con transformador montado"
       },
       {
         "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p7_2.jpeg",
-        "caption": "Detalle del transformador toroidal bobinado"
+        "caption": "Transformador elevador bobinado a mano con núcleo de ferrita E25/13/7"
       },
       {
         "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p8_3.jpeg",
-        "caption": "Bobina de choque fabricada"
+        "caption": "Bobina de choque (inductor de filtro) bobinada con núcleo de ferrita E20/10/6"
+      },
+      {
+        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p17_30.png",
+        "caption": "Diseño y ruteo de la placa del circuito de control PWM en Altium Designer"
+      },
+      {
+        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p18_31.jpeg",
+        "caption": "Medición en osciloscopio: respuesta del conversor a lazo cerrado con entrada de 24V (Vout = 48.6V)"
       }
     ]
   },
@@ -372,57 +384,70 @@ window.PROJECTS_DATA = [
     "category": "rf",
     "categoryLabel": "RF & Microondas",
     "date": "Febrero 2024",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Electrónica III",
     "authors": "Padrón Ramsés, Bronenberg Pedro",
     "pdfFile": "assets/docs/rf-oscilador-colpitts.pdf",
-    "summary": "Cálculo analítico, simulación, diseño de PCB y fabricación física de un oscilador senoidal de alta frecuencia en configuración Colpitts, con validación de criterio de Barkhausen y estabilidad.",
+    "summary": "Cálculo analítico, simulación circuital, diseño de PCB en FR-4, fabricación física y caracterización de un oscilador senoidal de radiofrecuencia en topología Colpitts para la banda de VHF (~220 MHz).",
     "highlights": [
-      "Diseño de red tanque LC resonante con divisor capacitivo de realimentación (C1/C2)",
-      "Verificación analítica del criterio de Barkhausen para inicio y sostenimiento de oscilación",
-      "Polarización y desacoplo de RF para máxima estabilidad espectral y mínima deriva térmica",
-      "Fabricación física de PCB y soldado de componentes de precisión",
-      "Medición de forma de onda, frecuencia de oscilación y contenido armónico en osciloscopio y analizador de espectro"
+      "Diseño de circuito tanque resonante LC con divisor capacitivo de realimentación (C1 / C2) para banda VHF",
+      "Verificación matemática del criterio de oscilación de Barkhausen a lazo abierto y cerrado",
+      "Simulación circuital para análisis armónico, estabilidad de frecuencia y verificación de nivel de salida",
+      "Fabricación física del PCB en placa FR-4 y soldado de componentes de montaje para alta frecuencia",
+      "Ensayos y verificación de punto de polarización DC (Vce real vs simulado) y frecuencia de oscilación"
     ],
     "specs": [
       {
-        "label": "Topología",
-        "val": "Oscilador Colpitts (Tanque LC)"
+        "label": "Topología de Circuito",
+        "val": "Oscilador Colpitts a transistor BJT de RF"
       },
       {
-        "label": "Realimentación",
-        "val": "Divisor capacitivo (C1 / C2)"
+        "label": "Frecuencia de Oscilación",
+        "val": "218 MHz - 223 MHz (Banda VHF)"
       },
       {
-        "label": "Forma de onda",
-        "val": "Senoidal pura de RF"
+        "label": "Red Resonante",
+        "val": "Tanque LC con divisor capacitivo C1/C2"
       },
       {
-        "label": "Fabricación",
-        "val": "PCB fabricado y caracterizado"
+        "label": "Sustrato de Placa",
+        "val": "FR-4 con plano de masa para RF"
+      },
+      {
+        "label": "Software de Simulación",
+        "val": "Software de simulación y diseño de RF"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Multímetro digital, fuente de alimentación continua, osciloscopio"
       }
     ],
     "tags": [
       "Oscilador Colpitts",
-      "Radiofrecuencia",
-      "Criterio de Barkhausen",
+      "Radiofrecuencia VHF",
       "Tanque LC",
-      "Diseño PCB",
-      "Osciloscopio"
+      "Criterio de Barkhausen",
+      "Placa FR-4",
+      "Electrónica III"
     ],
     "heroImage": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
+    "galleryTitle": "Circuito Fabricado y Simulaciones",
     "gallery": [
       {
         "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
-        "caption": "Medición de oscilación en osciloscopio digital de laboratorio"
+        "caption": "Circuito oscilador Colpitts de RF fabricado en placa FR-4 con componentes soldados"
       },
       {
         "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_18.png",
-        "caption": "Medición de estabilidad de frecuencia y análisis armónico"
+        "caption": "Detalle del montaje físico del circuito tanque LC y transistor de RF"
       },
       {
         "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p6_10.png",
-        "caption": "Esquemático y simulación de la red resonante"
+        "caption": "Simulación a lazo cerrado y análisis del espectro armónico (pico en 223.6 MHz)"
+      },
+      {
+        "src": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p7_14.png",
+        "caption": "Simulación temporal de la señal senoidal de salida de RF (218.6 MHz)"
       }
     ]
   },
@@ -432,69 +457,70 @@ window.PROJECTS_DATA = [
     "category": "rf",
     "categoryLabel": "RF & Microondas",
     "date": "Junio 2023",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Sistemas de Radioenlaces",
-    "authors": "Padrón Ramsés",
+    "authors": "Padrón Ramsés, Bronenberg Pedro, González Gabriel",
     "pdfFile": "assets/docs/telecom-proyecto-radioenlace-10ghz.pdf",
-    "summary": "Diseño y dimensionamiento de un radioenlace de microondas de 16 tramos (17 estaciones) en la banda de 10.5 GHz entre Villa María y Taninga (Córdoba), con equipos Alcatel-Lucent 9500 MPR, repetidores pasivos y modulación 32QAM.",
+    "summary": "Diseño, cálculo y dimensionamiento de un sistema de radioenlaces de microondas de 16 tramos (17 estaciones) en la banda de 10.5 GHz entre Villa María y Taninga (Córdoba), con repetidores pasivos y modulación digital 32QAM.",
     "highlights": [
-      "Diseño de enlace completo con 14 equipos activos y 3 estaciones pasivas (back-to-back y reflector en montaña)",
-      "Cálculo y trazado de perfiles topográficos con despeje de la 1° Zona de Fresnel para distintos factores K",
-      "Cálculo de atenuación en espacio libre, absorción atmosférica y desvanecimiento por lluvia",
-      "Dimensionamiento de antenas parabólicas de alta ganancia (HPX) y cálculo de torres de transmisión",
-      "Confiabilidad global alcanzada: 99.99938% con modulación 32QAM y canal de 5 MHz"
+      "Diseño del trazado de 16 tramos con 14 estaciones activas, 2 repetidores pasivos Back-to-Back y 1 reflector pasivo en alta montaña",
+      "Cálculo y trazado de perfiles topográficos con despeje del 100% de la 1° Zona de Fresnel (K=4/3 estándar y K=2/3 subestándar)",
+      "Modelado de atenuación en espacio libre, absorción atmosférica y desvanecimiento severo por lluvia según recomendaciones ITU-R",
+      "Cálculo de altura de torres, líneas de transmisión y dimensionamiento de antenas parabólicas de alta ganancia (HPX)",
+      "Confiabilidad global calculada superior al 99.999% con modulación digital 32QAM sobre canal de 5 MHz"
     ],
     "specs": [
       {
         "label": "Banda de Frecuencia",
-        "val": "10.5 GHz (10500 MHz)"
+        "val": "10.5 GHz (10500 MHz - Microondas)"
       },
       {
-        "label": "Equipos",
-        "val": "Alcatel-Lucent 9500 MPR"
+        "label": "Equipamiento",
+        "val": "Transceptores digitales Alcatel-Lucent 9500 MPR (ODU/IDU)"
       },
       {
-        "label": "Estaciones",
-        "val": "17 (14 activas, 2 Back-to-Back, 1 reflector)"
+        "label": "Topología de Red",
+        "val": "17 estaciones (14 activas, 2 Back-to-Back, 1 reflector pasivo)"
       },
       {
-        "label": "Modulación / Canal",
-        "val": "32QAM (Ancho de banda: 5 MHz)"
+        "label": "Modulación & Canal",
+        "val": "Modulación digital 32QAM (Ancho de banda: 5 MHz)"
+      },
+      {
+        "label": "Software de Cálculo",
+        "val": "Radio Mobile (análisis topográfico) y Microsoft Excel (balance de enlace ITU-R)"
       },
       {
         "label": "Confiabilidad",
-        "val": "99.99938%"
+        "val": "Global calculada > 99.999%"
       }
     ],
     "tags": [
       "Radioenlaces",
-      "Microondas 10.5 GHz",
+      "Microondas 10.5GHz",
       "Zona de Fresnel",
-      "Alcatel-Lucent",
-      "Antenas Parabólicas",
-      "Telecomunicaciones"
+      "Alcatel-Lucent 9500 MPR",
+      "Radio Mobile",
+      "Antenas Parabólicas"
     ],
     "heroImage": "assets/images/projects/telecom-radioenlace/image44.png",
+    "galleryTitle": "Cartografía, Perfiles Topográficos y Diagramas",
     "gallery": [
       {
         "src": "assets/images/projects/telecom-radioenlace/image44.png",
-        "caption": "Diagrama general del radioenlace Villa María – Taninga"
+        "caption": "Diagrama general del trazado del radioenlace Villa María – Taninga"
       },
       {
         "src": "assets/images/projects/telecom-radioenlace/image28.png",
-        "caption": "Perfil topográfico de enlace y despeje de Fresnel"
+        "caption": "Perfil topográfico de elevación del terreno y elipsoide de Fresnel en Radio Mobile"
       },
       {
         "src": "assets/images/projects/telecom-radioenlace/image30.png",
-        "caption": "Cálculo de cota de terreno y altura de antenas"
-      },
-      {
-        "src": "assets/images/projects/telecom-radioenlace/image48.png",
-        "caption": "Estudio de visibilidad directa y atenuación de tramo"
+        "caption": "Estudio de visibilidad directa, cotas de terreno y cálculo de altura de torres"
       },
       {
         "src": "assets/images/projects/telecom-radioenlace/image8.png",
-        "caption": "Ubicación de repetidor pasivo en zona montañosa"
+        "caption": "Ubicación geográfica y diagrama de estación repetidora pasiva en zona montañosa"
       }
     ]
   },
@@ -504,56 +530,67 @@ window.PROJECTS_DATA = [
     "category": "potencia",
     "categoryLabel": "Electricidad, Control e Instrumentación",
     "date": "Mayo 2023",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Control Digital de Procesos",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/control-digital-robot-linea-matlab.pdf",
-    "summary": "Modelado cinemático con 3 grados de libertad (posición planar y orientación angular), diseño de lazo de control digital y simulación dinámica completa en MATLAB para la cátedra de Control Digital de Procesos.",
+    "summary": "Modelado cinemático diferencial con 3 grados de libertad, caracterización de actuadores y sensores ópticos, diseño de lazo de control digital y simulación en MATLAB & Simulink para un móvil seguidor de línea.",
     "highlights": [
-      "Modelado cinemático diferencial con variables de estado de posición (X, Y) y orientación (phi)",
-      "Diseño de lazo de control discreto para seguimiento de trayectoria contrastada",
-      "Modelado de sensores ópticos infrarrojos y dinámica de actuadores servomotores",
-      "Simulación de respuesta transitoria y estabilidad del sistema de control en MATLAB",
-      "Proyecto de cátedra enfocado en la teoría de control y simulación matemática"
+      "Modelado cinemático diferencial con variables de estado: posición planar (X, Y) y orientación angular (phi)",
+      "Caracterización electromecánica de servomotores HK15148 y medición con calibre de parámetros físicos (radio de rueda y trocha)",
+      "Modelado del arreglo frontal de 8 sensores infrarrojos reflectivos CNY70 y función interpretada de pista (readTrack)",
+      "Diseño, comparación y análisis transitorio de controladores discretos Proporcional (P), PI y PID en lazo cerrado",
+      "Implementación del bloque de odometría y simulación numérica completa de trayectorias en MATLAB & Simulink"
     ],
     "specs": [
       {
-        "label": "Enfoque",
-        "val": "Simulación y Modelado Matemático"
+        "label": "Modelo Cinemático",
+        "val": "Tracción diferencial con 3 Grados de Libertad (X, Y, phi)"
       },
       {
-        "label": "Software",
-        "val": "MATLAB / Simulink"
+        "label": "Actuadores Modelados",
+        "val": "2 Servomotores de CC HK15148 modulados por PWM"
       },
       {
-        "label": "Cinemática",
-        "val": "Robot diferencial con 3 GDL (X, Y, phi)"
+        "label": "Sensores Modelados",
+        "val": "Arreglo frontal de 8 sensores ópticos infrarrojos reflectivos CNY70"
       },
       {
-        "label": "Control",
-        "val": "Control digital en lazo cerrado"
+        "label": "Estrategias de Control",
+        "val": "Controladores discretos P, PI y PID en lazo cerrado"
+      },
+      {
+        "label": "Software & Simulación",
+        "val": "MATLAB & Simulink (diagramas de bloques dinámicos y funciones S)"
       }
     ],
     "tags": [
       "Control Digital",
       "Modelado Cinemático",
       "MATLAB",
-      "Robótica Móvil",
-      "Simulación"
+      "Simulink",
+      "Sensores CNY70",
+      "Control PID",
+      "Robótica"
     ],
-    "heroImage": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p17_30.png",
+    "heroImage": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p18_33.png",
+    "galleryTitle": "Modelado y Simulaciones en Simulink",
     "gallery": [
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p17_30.png",
-        "caption": "Simulación de trayectoria del móvil en MATLAB"
-      },
-      {
         "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p18_33.png",
-        "caption": "Evolución de las variables de estado y error de seguimiento"
+        "caption": "Simulación de trayectoria del móvil sobre la pista con controlador PI en Simulink"
       },
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p10_15.png",
-        "caption": "Esquema cinemático de los 3 grados de libertad"
+        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p14_22.png",
+        "caption": "Diagrama de bloques del modelo dinámico completo en Simulink (Planta, Actuadores y Control)"
+      },
+      {
+        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p10_16.png",
+        "caption": "Disposición geométrica y distribución angular del arreglo de sensores ópticos CNY70"
+      },
+      {
+        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p17_30.png",
+        "caption": "Simulación de seguimiento con controlador Proporcional (P) evidenciando oscilaciones"
       }
     ]
   },
@@ -562,126 +599,133 @@ window.PROJECTS_DATA = [
     "title": "Modelado, Convolución y Series de Fourier en MATLAB",
     "category": "software",
     "categoryLabel": "Simulación & CAD",
-    "date": "2023",
-    "institution": "Facultad de Ingeniería",
+    "date": "Mayo 2023",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Análisis de Señales y Sistemas",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/senales-sistemas-lab3-series-fourier.pdf",
-    "summary": "Serie de prácticas de laboratorio sobre procesamiento computacional de señales: análisis en el dominio del tiempo y de la frecuencia, convolución discreta/continua y series de Fourier aplicadas a rectificadores y filtros RC.",
+    "summary": "Serie de trabajos de laboratorio sobre procesamiento computacional de señales: análisis temporal y frecuencial de sistemas LTI, cálculo y simulación de convolución continua/discreta y descomposición en Series de Fourier.",
     "highlights": [
-      "Modelado matemático y algorítmico de sistemas lineales e invariantes en el tiempo (LTI)",
-      "Convolución continua y discreta con cálculo analítico validado mediante simulación numérica",
-      "Descomposición armónica de señales periódicas mediante Series de Fourier",
-      "Análisis espectral completo de un rectificador de onda completa acoplado a un filtro pasabajos RC",
-      "Cálculo de coeficientes de Fourier teóricos vs FFT simulada en MATLAB"
+      "Síntesis computacional de señales senoidales y análisis del fenómeno de multitrayecto (Laboratorio 1)",
+      "Cálculo analítico y simulación gráfica interactiva de convolución continua y discreta para sistemas LTI (Laboratorio 2)",
+      "Descomposición armónica en Series de Fourier de una señal rectificada de onda completa acoplada a filtro RC (Laboratorio 3)",
+      "Comparación numérica entre coeficientes analíticos teóricos y Transformada Rápida de Fourier (FFT) en MATLAB",
+      "Análisis de respuesta en frecuencia y atenuación de armónicos en el dominio del tiempo y de la frecuencia"
     ],
     "specs": [
       {
-        "label": "Software",
-        "val": "MATLAB, SPFirst Toolbox"
+        "label": "Software Principal",
+        "val": "MATLAB (entorno académico de cálculo y simulación)"
       },
       {
-        "label": "Conceptos clave",
-        "val": "Sistemas LTI, Convolución, Series de Fourier, FFT"
+        "label": "Toolboxes & Funciones",
+        "val": "SPFirst Toolbox (funciones dconvdemo, cconvdemo)"
       },
       {
-        "label": "Aplicación",
-        "val": "Filtrado analógico, Rectificación de onda completa"
+        "label": "Sistemas Analizados",
+        "val": "Sistemas Lineales e Invariantes en el Tiempo (LTI), filtros RC pasabajos"
+      },
+      {
+        "label": "Operaciones Matemáticas",
+        "val": "Convolución continua/discreta, Series de Fourier, FFT"
       }
     ],
     "tags": [
       "MATLAB",
       "Señales y Sistemas",
-      "Series de Fourier",
       "Convolución LTI",
-      "Espectro Armónico"
+      "Series de Fourier",
+      "SPFirst",
+      "FFT"
     ],
     "heroImage": "assets/images/projects/senales-convolucion/senales-convolucion-p9_17.jpeg",
+    "galleryTitle": "Simulaciones en MATLAB",
     "gallery": [
       {
         "src": "assets/images/projects/senales-convolucion/senales-convolucion-p9_17.jpeg",
-        "caption": "Simulación de convolución en el dominio del tiempo"
+        "caption": "Simulación interactiva de convolución continua en MATLAB con interfaz SPFirst"
       },
       {
         "src": "assets/images/projects/senales-convolucion/senales-convolucion-p10_20.jpeg",
-        "caption": "Respuesta al impulso de sistemas continuos y discretos"
+        "caption": "Convolución discreta y respuesta al impulso en sistemas discretos LTI"
       },
       {
         "src": "assets/images/projects/senales-convolucion/senales-convolucion-p11_23.jpeg",
-        "caption": "Evaluación gráfica interactiva en MATLAB"
+        "caption": "Evaluación temporal del producto de convolución y superposición"
       }
     ]
   },
   {
     "id": "tcem-adaptacion-awr",
-    "title": "Adaptación de Impedancias en Microstrip con AWR",
+    "title": "Adaptación de Impedancias en Microstrip con Cadence AWR",
     "category": "software",
     "categoryLabel": "Simulación & CAD",
     "date": "Noviembre 2022",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Teoría de Campos Electromagnéticos (TCEM)",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/tcem-adaptacion-impedancias-awr.pdf",
-    "summary": "Cálculos analíticos, diseño en Carta de Smith y simulación en Cadence AWR de redes de adaptación de 150Ω a 50Ω a 2.4 GHz mediante transformadores de cuarto de onda (λ/4) y stubs en microtiras FR-4.",
+    "summary": "Cálculo analítico, diseño en Carta de Smith y simulación en Cadence AWR Microwave Office de redes de adaptación de 150 Ω a 50 Ω a 2.4 GHz mediante transformador λ/4 y stubs en microtiras FR-4.",
     "highlights": [
-      "Cálculo analítico de impedancia característica y longitud eléctrica en microstrip a 2.4 GHz",
-      "Diseño de transformador de cuarto de onda (λ/4) con ancho de banda evaluado para |Γ| ≤ 0.1",
-      "Diseño y cálculo con stubs (simple stub en circuito abierto y cortocircuito)",
-      "Modelado circuital y simulación electromagnética en Cadence AWR Design Environment",
-      "Comparación de respuesta en frecuencia, pérdidas de retorno (S11) y ancho de banda relativo"
+      "Cálculo analítico de impedancia característica y longitud eléctrica en líneas microstrip a 2.4 GHz",
+      "Diseño y simulación de transformador de cuarto de onda (λ/4) con ancho de banda evaluado para |Γ| ≤ 0.1",
+      "Diseño y cálculo de redes de adaptación mediante simple stub (configuraciones en circuito abierto y cortocircuito)",
+      "Modelado circuital y simulación de pérdidas de retorno (S11) en Cadence AWR Microwave Office",
+      "Comparación de anchos de banda relativos y comportamiento en frecuencia entre transformador λ/4 y stub"
     ],
     "specs": [
       {
-        "label": "Frecuencia central",
-        "val": "2.4 GHz"
+        "label": "Frecuencia Central",
+        "val": "2.4 GHz (Banda ISM)"
       },
       {
-        "label": "Transformación",
-        "val": "150 Ω a 50 Ω (|Γ| ≤ 0.1)"
+        "label": "Transformación de Impedancia",
+        "val": "Adaptación de carga de 150 Ω a línea de 50 Ω (|Γ| ≤ 0.1)"
       },
       {
-        "label": "Topologías",
-        "val": "Transformador λ/4 y Stubs (abierto/corto)"
+        "label": "Topologías Diseñadas",
+        "val": "Transformador de cuarto de onda (λ/4) y Simple Stub (abierto/corto)"
       },
       {
-        "label": "Sustrato",
-        "val": "FR-4 (εr=4.4, h=1.6256 mm)"
+        "label": "Sustrato Microstrip",
+        "val": "FR-4 (εr = 4.4, espesor de dieléctrico h = 1.6256 mm)"
       },
       {
-        "label": "Software",
-        "val": "Cadence AWR Microwave Office, Carta de Smith"
+        "label": "Software de RF",
+        "val": "Cadence AWR Microwave Office y Carta de Smith"
       }
     ],
     "tags": [
       "AWR Microwave Office",
       "Microstrip",
       "Carta de Smith",
-      "Stubs",
+      "Adaptación de Impedancias",
       "Transformador λ/4",
-      "FR-4",
+      "Stubs",
       "TCEM"
     ],
     "heroImage": "assets/images/projects/tcem-adaptacion-awr/tcem-p18_19.jpeg",
+    "galleryTitle": "Carta de Smith y Simulaciones en AWR",
     "gallery": [
       {
         "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p18_19.jpeg",
-        "caption": "Carta de Smith con trayectoria de adaptación de impedancia"
+        "caption": "Carta de Smith con trayectoria analítica de adaptación de 150 Ω a 50 Ω"
       },
       {
         "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p12_11.png",
-        "caption": "Respuesta en frecuencia S11 en AWR con transformador λ/4"
+        "caption": "Simulación de coeficiente de reflexión S11 del transformador λ/4 en Cadence AWR"
       },
       {
         "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p15_17.png",
-        "caption": "Simulación de adaptación con stub en AWR"
+        "caption": "Simulación de respuesta en frecuencia S11 con red de simple stub en AWR"
       },
       {
         "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p11_9.png",
-        "caption": "Esquemático del transformador de λ/4 en microstrip"
+        "caption": "Esquemático del transformador de λ/4 en microtiras FR-4 en AWR"
       },
       {
         "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p14_14.png",
-        "caption": "Circuito de adaptación con simple stub"
+        "caption": "Esquemático circuital de adaptación mediante simple stub en microstrip"
       }
     ]
   },
@@ -691,65 +735,75 @@ window.PROJECTS_DATA = [
     "category": "rf",
     "categoryLabel": "RF & Microondas",
     "date": "Junio 2022",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Electrónica III",
-    "authors": "Bronenberg Pedro, Salvador Adrián, Padrón Ramsés",
+    "authors": "Padrón Ramsés, Bronenberg Pedro, Salvador Adrián",
     "pdfFile": "assets/docs/rf-amplificador-bajo-ruido-lna.pdf",
-    "summary": "Diseño, análisis de estabilidad, adaptación de impedancias en Carta de Smith y caracterización de un amplificador de bajo ruido (LNA) para etapas front-end de receptores de RF.",
+    "summary": "Diseño, análisis de estabilidad, adaptación de impedancias en Carta de Smith, fabricación en sustrato FR-4 y caracterización con Analizador de Redes de un amplificador de bajo ruido (LNA) a 2.4 GHz.",
     "highlights": [
-      "Selección y polarización en DC de transistor de RF de alta frecuencia",
-      "Análisis riguroso de estabilidad incondicional (criterio de Rollet K > 1 y |Δ| < 1) con círculos de estabilidad",
-      "Compromiso entre mínima figura de ruido (Fmin) y máxima ganancia mediante círculos de ruido constante",
-      "Diseño de redes de adaptación de impedancia de entrada y salida con componentes de RF",
-      "Montaje experimental y medición de respuesta en frecuencia y ganancia"
+      "Selección y polarización en DC de transistor bipolar de RF (Vce = 5V, Ie = 3mA) para mínima figura de ruido",
+      "Análisis riguroso de estabilidad incondicional (factor de Rollet K > 1 y |Δ| < 1) mediante círculos de estabilidad",
+      "Diseño de redes de adaptación de entrada y salida con líneas microstrip y stub radial usando Carta de Smith",
+      "Fabricación física en circuito impreso FR-4 mediante método químico y soldadura de componentes de RF",
+      "Medición experimental en laboratorio con Analizador de Redes Vectorial (frecuencia medida en 2.256 GHz)"
     ],
     "specs": [
       {
-        "label": "Tipo de Circuito",
-        "val": "Amplificador de Bajo Ruido (LNA)"
+        "label": "Frecuencia de Trabajo",
+        "val": "2.4 GHz (Frecuencia medida en laboratorio: 2.256 GHz)"
       },
       {
-        "label": "Análisis",
-        "val": "Parámetros S, Círculos de Estabilidad, Carta de Smith"
+        "label": "Dispositivo Activo",
+        "val": "Transistor BJT de RF de bajo ruido (polarizado a 5V / 3mA)"
       },
       {
-        "label": "Criterio Estabilidad",
-        "val": "Factor de Rollet K > 1"
+        "label": "Criterio de Diseño",
+        "val": "Factor de Rollet K > 1 (estabilidad incondicional), compromiso Fmin y Gmax"
       },
       {
-        "label": "Adaptación",
-        "val": "Redes L-Match de RF para Fmin y Gmax"
+        "label": "Redes de Adaptación",
+        "val": "Líneas de transmisión microstrip y stub radial en Carta de Smith"
+      },
+      {
+        "label": "Sustrato & Conectores",
+        "val": "FR-4 con plano de masa y conectores coaxiales SMA hembra de 50 Ω"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Analizador de Redes Vectorial (VNA), fuente de alimentación y multímetro"
       }
     ],
     "tags": [
-      "Radiofrecuencia",
+      "Radiofrecuencia 2.4GHz",
       "LNA",
+      "Bajo Ruido",
       "Carta de Smith",
       "Parámetros S",
-      "Figura de Ruido",
-      "Adaptación de Impedancias"
+      "VNA",
+      "Microstrip"
     ],
-    "heroImage": "assets/images/projects/rf-lna/rf-lna-p17_43.jpeg",
+    "heroImage": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
+    "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
     "gallery": [
       {
+        "src": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
+        "caption": "Placa PCB del amplificador LNA fabricada en FR-4 con componentes soldados"
+      },
+      {
+        "src": "assets/images/projects/rf-lna/rf-lna-p14_35.png",
+        "caption": "Trayectoria de adaptación de impedancia y stub radial en Carta de Smith"
+      },
+      {
+        "src": "assets/images/projects/rf-lna/rf-lna-p14_36.png",
+        "caption": "Simulación de parámetros S (reflexión S11 y ganancia S21) en la banda de 2.4 GHz"
+      },
+      {
         "src": "assets/images/projects/rf-lna/rf-lna-p17_43.jpeg",
-        "caption": "Montaje experimental del amplificador LNA en banco de laboratorio"
+        "caption": "Medición experimental del parámetro S11 en el Analizador de Redes Vectorial (VNA)"
       },
       {
         "src": "assets/images/projects/rf-lna/rf-lna-p17_44.jpeg",
-        "caption": "Conexión a instrumental de medición de RF"
-      },
-      {
-        "src": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
-        "caption": "Circuito LNA soldado con componentes SMD y conectores coaxiales"
-      },
-      {
-        "src": "assets/images/projects/rf-lna/rf-lna-p11_26.png",
-        "caption": "Círculos de estabilidad y adaptación en Carta de Smith"
-      },
-      {
-        "src": "assets/images/projects/rf-lna/rf-lna-p8_17.png",
-        "caption": "Círculos de figura de ruido y ganancia disponible"
+        "caption": "Visualización en pantalla del VNA mostrando la resonancia centrada en 2.256 GHz"
       }
     ]
   },
@@ -759,60 +813,75 @@ window.PROJECTS_DATA = [
     "category": "rf",
     "categoryLabel": "RF & Microondas",
     "date": "Junio 2022",
-    "institution": "Facultad de Ingeniería",
+    "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Electrónica III",
-    "authors": "Bronenberg Pedro, Padrón Ramsés, Salvador Adrián",
+    "authors": "Padrón Ramsés, Bronenberg Pedro, Salvador Adrián",
     "pdfFile": "assets/docs/rf-filtro-split-capacitivo.pdf",
-    "summary": "Cálculo analítico, simulación y realización física de un filtro pasabanda LC sintonizado con acoplamiento por split capacitivo para adaptación óptima de impedancias en etapas de radio.",
+    "summary": "Cálculo analítico, simulación en Cadence AWR, fabricación en PCB FR-4 y caracterización con Analizador de Redes de un filtro pasabanda LC sintonizado con divisor capacitivo a 400 MHz.",
     "highlights": [
-      "Diseño de circuito sintonizado de alto factor de calidad (Q) para selección de canal de RF",
-      "Transformación de impedancias mediante divisor capacitivo de entrada y salida",
-      "Simulación de curva de respuesta en frecuencia, ancho de banda y atenuación fuera de banda",
-      "Montaje y calibración experimental en placa de circuito impreso",
-      "Medición de respuesta en frecuencia con generador de RF y detector de pico"
+      "Diseño analítico de circuito sintonizado pasabanda LC de 2° orden centrado en 400 MHz (Banda UHF)",
+      "Adaptación y transformación de impedancias mediante divisor split capacitivo a puertos de 50 Ω",
+      "Simulación circuital completa de parámetros S en Cadence AWR Microwave Office",
+      "Fabricación física en circuito impreso FR-4 mediante método químico y soldadura de componentes",
+      "Medición experimental de selectividad en Analizador de Redes Vectorial (frecuencia medida en 383 MHz)"
     ],
     "specs": [
       {
-        "label": "Tipo",
-        "val": "Filtro pasabanda sintonizado LC"
+        "label": "Frecuencia Central",
+        "val": "Diseño: 400 MHz (UHF) | Medida en laboratorio: 383 MHz"
       },
       {
-        "label": "Acoplamiento",
-        "val": "Split capacitivo (Divisor C)"
+        "label": "Topología de Filtro",
+        "val": "Filtro pasabanda sintonizado LC de 2° orden con alto factor Q"
       },
       {
-        "label": "Adaptación",
-        "val": "Transformación de impedancia a 50 Ω"
+        "label": "Acoplamiento & Adaptación",
+        "val": "Split capacitivo (divisor capacitivo) adaptado a 50 Ω"
       },
       {
-        "label": "Instrumentación",
-        "val": "Generador de RF, Osciloscopio, Analizador"
+        "label": "Sustrato & Conectores",
+        "val": "Placa FR-4 fabricada en laboratorio con conectores SMA"
+      },
+      {
+        "label": "Software EDA / CAD",
+        "val": "Cadence AWR Microwave Office (esquemático y simulación de parámetros S)"
+      },
+      {
+        "label": "Instrumental",
+        "val": "Analizador de Redes Vectorial (VNA), medidor LCR"
       }
     ],
     "tags": [
       "Filtro RF",
       "Split Capacitivo",
+      "Banda UHF",
+      "AWR Microwave Office",
       "Circuito Tanque LC",
-      "Adaptación de Impedancias",
-      "Factor Q"
+      "VNA",
+      "FR-4"
     ],
     "heroImage": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_14.jpeg",
+    "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
     "gallery": [
       {
         "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_14.jpeg",
-        "caption": "Prototipo del filtro sintonizado montado en placa"
+        "caption": "Circuito PCB del filtro sintonizado fabricado en FR-4 con componentes soldados"
+      },
+      {
+        "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p6_8.png",
+        "caption": "Esquemático del filtro con split capacitivo en Cadence AWR Microwave Office"
+      },
+      {
+        "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p6_9.png",
+        "caption": "Simulación de parámetros S (S11 y S21) en AWR mostrando centro en 400 MHz"
       },
       {
         "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p10_20.jpeg",
-        "caption": "Medición de la curva de selectividad y respuesta en frecuencia"
+        "caption": "Medición experimental de respuesta en frecuencia con el Analizador de Redes Vectorial"
       },
       {
         "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p11_23.jpeg",
-        "caption": "Banco de ensayos en laboratorio de comunicaciones"
-      },
-      {
-        "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_15.jpeg",
-        "caption": "Detalle de los inductores toroidales y capacitores de precisión"
+        "caption": "Detalle de la curva de transmisión S21 en pantalla del VNA (pico medido en 383 MHz)"
       }
     ]
   }

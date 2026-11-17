@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const specsHtml = project.specs && project.specs.length > 0 ? `
       <div class="mb-6 p-4 rounded-lg bg-zinc-950 border border-zinc-800">
-        <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 mb-3 flex items-center gap-2 font-semibold">
+        <h4 class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-3 flex items-center gap-2 font-semibold">
           <i data-lucide="cpu" class="w-4 h-4 text-orange-400"></i> Especificaciones Técnicas Clave
         </h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const highlightsHtml = project.highlights && project.highlights.length > 0 ? `
       <div class="mb-6">
-        <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 mb-3 flex items-center gap-2 font-semibold">
+        <h4 class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-3 flex items-center gap-2 font-semibold">
           <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Aspectos Destacados del Desarrollo
         </h4>
         <ul class="space-y-1.5">
@@ -231,10 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     ` : '';
 
+    const galleryTitle = project.galleryTitle || (project.category === 'software' ? 'Capturas de la Interfaz y Simulación' : 'Galería de Prototipos y Mediciones');
+
     const galleryHtml = project.gallery && project.gallery.length > 0 ? `
       <div>
-        <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 mb-3 flex items-center gap-2 font-semibold">
-          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> Galería de Prototipos, Mediciones y Esquemáticos
+        <h4 class="text-xs font-mono uppercase tracking-wider text-orange-400 mb-3 flex items-center gap-2 font-semibold">
+          <i data-lucide="image" class="w-4 h-4 text-orange-400"></i> ${galleryTitle}
         </h4>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
           ${project.gallery.map(img => `
@@ -275,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${project.title}
       </h2>
       <div class="text-xs text-orange-400 font-mono mb-4">
-        Asignatura: ${project.subject} | Autores: ${project.authors}
+        Asignatura: ${project.subject} | ${project.authors && project.authors.includes(',') ? 'Autores' : 'Autor'}: ${project.authors}
       </div>
 
       <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6">
