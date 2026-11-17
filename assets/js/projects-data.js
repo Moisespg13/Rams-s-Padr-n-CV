@@ -9,7 +9,7 @@ window.PROJECTS_DATA = [
     "subject": "Desafío Internacional 'Meteor Madness'",
     "authors": "Padrón Gentile Ramsés, Sosa Tomás, Espinosa Leonel, Farraté Milagros, Vesco Genaro",
     "pdfFile": "assets/docs/nasa-space-apps-deimos-simulator.pdf",
-    "summary": "Plataforma web interactiva desarrollada para el hackathon internacional de la NASA, grafica órbitas de asteroides cercanos a la Tierra (NEOs/PHAs) y calcula consecuencias de impacto en una zona seleccionada.",
+    "summary": "Plataforma web interactiva desarrollada para el hackathon internacional de la NASA, donde obtuvimos el 5to puesto. Grafica órbitas de asteroides cercanos a la Tierra (NEOs/PHAs) y calcula consecuencias de impacto en una zona seleccionada.",
     "highlights": [
       "Integración directa con las APIs abiertas de NASA JPL: Small-Body Database Query (SBDB Query) y SBDB API",
       "Visualizador 3D para graficar la órbita del asteroide seleccionado junto a las órbitas de los planetas interiores",
@@ -40,13 +40,10 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "NASA Hackathon",
-      "React",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "APIs NASA JPL",
-      "Física de Impactos"
+      "NASA",
+      "Hackaton",
+      "desarrollo web",
+      "python"
     ],
     "heroImage": "assets/images/projects/nasa-deimos-simulator/nasa-deimos-simulator-p4_5.png",
     "galleryTitle": "Capturas de la Interfaz y Simulación",
@@ -115,13 +112,11 @@ window.PROJECTS_DATA = [
     ],
     "tags": [
       "STM32",
-      "ARM Cortex-M0",
       "Lenguaje C",
-      "DAC 12-bit",
-      "Timers",
       "I2C",
-      "LCD 16x2",
-      "Osciloscopio"
+      "Timers",
+      "DAC",
+      "Sistemas embebidos"
     ],
     "heroImage": "assets/images/projects/stm32-wavegenerator/stm32-wavegenerator-p15_15.jpeg",
     "galleryTitle": "Prototipo y Señales en Osciloscopio",
@@ -190,12 +185,13 @@ window.PROJECTS_DATA = [
     ],
     "tags": [
       "DSP",
-      "Filtros FIR",
+      "Filtros",
+      "FIR",
       "Raspberry Pi",
       "Lenguaje C",
-      "Audio en Tiempo Real",
-      "LTspice",
-      "Osciloscopio"
+      "Matlab",
+      "Conversores AD/DA",
+      "Audio"
     ],
     "heroImage": "assets/images/projects/dsp-filtro-audio/dsp-filtro-audio-p5_2.png",
     "galleryTitle": "Diseño y Validaciones en Laboratorio",
@@ -267,13 +263,13 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "Microondas 2.4GHz",
-      "Líneas Acopladas",
+      "Microondas",
+      "Filtros",
+      "RF",
       "Microstrip",
-      "CST Studio Suite",
-      "MATLAB RF",
-      "VNA",
-      "FR-4"
+      "CST",
+      "Matlab",
+      "2.4GHz"
     ],
     "heroImage": "assets/images/projects/microondas-filtro-2g4/microondas-filtro-2g4-p8_10.jpeg",
     "galleryTitle": "Placa Fabricada, Simulación 3D y Mediciones",
@@ -345,13 +341,14 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "Electrónica de Potencia",
-      "Topología Push-Pull",
-      "SG3525",
-      "Altium Designer",
-      "Transformador Ferrita",
-      "Control PWM",
-      "Osciloscopio"
+      "Potencia",
+      "Push-Pull",
+      "Transformador",
+      "Bobinado",
+      "Altium",
+      "Eagle",
+      "PWM",
+      "Realimentación"
     ],
     "heroImage": "assets/images/projects/potencia-dcdc/potencia-dcdc-p9_5.jpeg",
     "galleryTitle": "Prototipo, PCB y Mediciones en Laboratorio",
@@ -423,12 +420,12 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "Oscilador Colpitts",
-      "Radiofrecuencia VHF",
-      "Tanque LC",
-      "Criterio de Barkhausen",
-      "Placa FR-4",
-      "Electrónica III"
+      "Oscilador",
+      "RF",
+      "VHF",
+      "LC",
+      "FR-4",
+      "AWR"
     ],
     "heroImage": "assets/images/projects/rf-oscilador-colpitts/rf-oscilador-colpitts-p8_17.png",
     "galleryTitle": "Circuito Fabricado y Simulaciones",
@@ -497,11 +494,12 @@ window.PROJECTS_DATA = [
     ],
     "tags": [
       "Radioenlaces",
-      "Microondas 10.5GHz",
-      "Zona de Fresnel",
-      "Alcatel-Lucent 9500 MPR",
-      "Radio Mobile",
-      "Antenas Parabólicas"
+      "Fresnel",
+      "Antenas",
+      "Back to Back",
+      "Reflector",
+      "Radiomobile",
+      "Excel"
     ],
     "heroImage": "assets/images/projects/telecom-radioenlace/image44.png",
     "galleryTitle": "Cartografía, Perfiles Topográficos y Diagramas",
@@ -566,12 +564,10 @@ window.PROJECTS_DATA = [
     ],
     "tags": [
       "Control Digital",
-      "Modelado Cinemático",
-      "MATLAB",
+      "PID",
       "Simulink",
-      "Sensores CNY70",
-      "Control PID",
-      "Robótica"
+      "Matlab",
+      "Simulación"
     ],
     "heroImage": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p18_33.png",
     "galleryTitle": "Modelado y Simulaciones en Simulink",
@@ -631,12 +627,10 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "MATLAB",
+      "Matlab",
       "Señales y Sistemas",
-      "Convolución LTI",
-      "Series de Fourier",
-      "SPFirst",
-      "FFT"
+      "convolución",
+      "Fourier"
     ],
     "heroImage": "assets/images/projects/senales-convolucion/senales-convolucion-p9_17.jpeg",
     "galleryTitle": "Simulaciones en MATLAB",
@@ -696,13 +690,11 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "AWR Microwave Office",
-      "Microstrip",
-      "Carta de Smith",
-      "Adaptación de Impedancias",
-      "Transformador λ/4",
-      "Stubs",
-      "TCEM"
+      "AWR",
+      "Simulación",
+      "Adaptación",
+      "Smith",
+      "Microstrip"
     ],
     "heroImage": "assets/images/projects/tcem-adaptacion-awr/tcem-p18_19.jpeg",
     "galleryTitle": "Carta de Smith y Simulaciones en AWR",
@@ -774,13 +766,11 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "Radiofrecuencia 2.4GHz",
+      "RF",
+      "2.4GHz",
       "LNA",
-      "Bajo Ruido",
-      "Carta de Smith",
-      "Parámetros S",
-      "VNA",
-      "Microstrip"
+      "Amplificación",
+      "Smith"
     ],
     "heroImage": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
     "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
@@ -852,13 +842,11 @@ window.PROJECTS_DATA = [
       }
     ],
     "tags": [
-      "Filtro RF",
-      "Split Capacitivo",
-      "Banda UHF",
-      "AWR Microwave Office",
-      "Circuito Tanque LC",
-      "VNA",
-      "FR-4"
+      "RF",
+      "Filtros",
+      "UHF",
+      "AWR",
+      "Split Capacitivo"
     ],
     "heroImage": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_14.jpeg",
     "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
