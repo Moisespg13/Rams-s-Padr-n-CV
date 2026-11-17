@@ -622,78 +622,7 @@ window.PROJECTS_DATA = [
       }
     ]
   },
-  {
-    "id": "tcem-adaptacion-awr",
-    "title": "Adaptación de Impedancias en Microstrip con Cadence AWR",
-    "category": "software",
-    "categoryLabel": "Simulación & CAD",
-    "date": "Noviembre 2022",
-    "institution": "Facultad de Ingeniería - CRUC IUA",
-    "subject": "Teoría de Campos Electromagnéticos (TCEM)",
-    "authors": "Padrón Ramsés",
-    "pdfFile": "assets/docs/tcem-adaptacion-impedancias-awr.pdf",
-    "summary": "Cálculo analítico, diseño en Carta de Smith y simulación en Cadence AWR Microwave Office de redes de adaptación de 150 Ω a 50 Ω a 2.4 GHz mediante transformador λ/4 y stubs en microtiras FR-4.",
-    "highlights": [
-      "Cálculo analítico de impedancia característica y longitud eléctrica en líneas microstrip a 2.4 GHz",
-      "Diseño y simulación de transformador de cuarto de onda (λ/4) con ancho de banda evaluado para |Γ| ≤ 0.1",
-      "Diseño y cálculo de redes de adaptación mediante simple stub (configuraciones en circuito abierto y cortocircuito)",
-      "Modelado circuital y simulación de pérdidas de retorno (S11) en Cadence AWR Microwave Office",
-      "Comparación de anchos de banda relativos y comportamiento en frecuencia entre transformador λ/4 y stub"
-    ],
-    "specs": [
-      {
-        "label": "Frecuencia Central",
-        "val": "2.4 GHz (Banda ISM)"
-      },
-      {
-        "label": "Transformación de Impedancia",
-        "val": "Adaptación de carga de 150 Ω a línea de 50 Ω (|Γ| ≤ 0.1)"
-      },
-      {
-        "label": "Topologías Diseñadas",
-        "val": "Transformador de cuarto de onda (λ/4) y Simple Stub (abierto/corto)"
-      },
-      {
-        "label": "Sustrato Microstrip",
-        "val": "FR-4 (εr = 4.4, espesor de dieléctrico h = 1.6256 mm)"
-      },
-      {
-        "label": "Software de RF",
-        "val": "Cadence AWR Microwave Office y Carta de Smith"
-      }
-    ],
-    "tags": [
-      "AWR",
-      "Simulación",
-      "Adaptación",
-      "Smith",
-      "Microstrip"
-    ],
-    "heroImage": "assets/images/projects/tcem-adaptacion-awr/tcem-p18_19.jpeg",
-    "galleryTitle": "Carta de Smith y Simulaciones en AWR",
-    "gallery": [
-      {
-        "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p18_19.jpeg",
-        "caption": "Carta de Smith con trayectoria analítica de adaptación de 150 Ω a 50 Ω"
-      },
-      {
-        "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p12_11.png",
-        "caption": "Simulación de coeficiente de reflexión S11 del transformador λ/4 en Cadence AWR"
-      },
-      {
-        "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p15_17.png",
-        "caption": "Simulación de respuesta en frecuencia S11 con red de simple stub en AWR"
-      },
-      {
-        "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p11_9.png",
-        "caption": "Esquemático del transformador de λ/4 en microtiras FR-4 en AWR"
-      },
-      {
-        "src": "assets/images/projects/tcem-adaptacion-awr/tcem-p14_14.png",
-        "caption": "Esquemático circuital de adaptación mediante simple stub en microstrip"
-      }
-    ]
-  },
+
   {
     "id": "rf-lna",
     "title": "Diseño de Amplificador de Bajo Ruido (LNA) para RF",
