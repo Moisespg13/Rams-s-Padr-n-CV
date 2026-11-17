@@ -821,11 +821,11 @@ window.PROJECTS_DATA = [
       "AWR",
       "Split Capacitivo"
     ],
-    "heroImage": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_14.jpeg",
+    "heroImage": "assets/images/projects/rf-filtro-split/rf-filtro-split-p9_18.jpeg",
     "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
     "gallery": [
       {
-        "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p8_14.jpeg",
+        "src": "assets/images/projects/rf-filtro-split/rf-filtro-split-p9_18.jpeg",
         "caption": "Circuito PCB del filtro sintonizado fabricado en FR-4 con componentes soldados"
       },
       {
