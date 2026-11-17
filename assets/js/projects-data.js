@@ -746,11 +746,15 @@ window.PROJECTS_DATA = [
       "Smith"
     ],
     "heroImage": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
-    "galleryTitle": "Circuito Fabricado y Mediciones en VNA",
+    "galleryTitle": "Diseño, Placa Fabricada y Medición en VNA",
     "gallery": [
       {
         "src": "assets/images/projects/rf-lna/rf-lna-p16_41.jpeg",
-        "caption": "Placa PCB del amplificador LNA fabricada en FR-4 con componentes soldados"
+        "caption": "Placa PCB del amplificador LNA armada en FR-4 con componentes de RF y conectores SMA"
+      },
+      {
+        "src": "assets/images/projects/rf-lna/rf-lna-p15_38.png",
+        "caption": "Diseño del layout de pistas microstrip del amplificador LNA"
       },
       {
         "src": "assets/images/projects/rf-lna/rf-lna-p14_35.png",
@@ -762,11 +766,7 @@ window.PROJECTS_DATA = [
       },
       {
         "src": "assets/images/projects/rf-lna/rf-lna-p17_43.jpeg",
-        "caption": "Medición experimental del parámetro S11 en el Analizador de Redes Vectorial (VNA)"
-      },
-      {
-        "src": "assets/images/projects/rf-lna/rf-lna-p17_44.jpeg",
-        "caption": "Visualización en pantalla del VNA mostrando la resonancia centrada en 2.256 GHz"
+        "caption": "Medición experimental en Analizador de Redes Vectorial (VNA) con resonancia en 2.256 GHz"
       }
     ]
   },
