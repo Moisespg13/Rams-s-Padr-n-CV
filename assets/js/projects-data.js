@@ -488,7 +488,7 @@ window.PROJECTS_DATA = [
     "date": "Junio 2023",
     "institution": "Facultad de Ingeniería - CRUC IUA",
     "subject": "Sistemas de Radioenlaces",
-    "authors": "Padrón Ramsés, Bronenberg Pedro, González Gabriel",
+    "authors": "Padrón Ramsés, Bronenberg Pedro, González Maximiliano",
     "pdfFile": "assets/docs/telecom-proyecto-radioenlace-10ghz.pdf",
     "summary": "Diseño, cálculo y dimensionamiento de un sistema de radioenlaces de microondas de 16 tramos (17 estaciones) en la banda de 10.5 GHz entre Villa María y Taninga (Córdoba), con repetidores pasivos y modulación digital 32QAM.",
     "highlights": [
@@ -533,24 +533,24 @@ window.PROJECTS_DATA = [
       "Radiomobile",
       "Excel"
     ],
-    "heroImage": "assets/images/projects/telecom-radioenlace/image44.png",
+    "heroImage": "assets/images/projects/telecom-radioenlace/telecom-radioenlace-diagrama.png",
     "galleryTitle": "Cartografía, Perfiles Topográficos y Diagramas",
     "gallery": [
       {
-        "src": "assets/images/projects/telecom-radioenlace/image44.png",
-        "caption": "Diagrama general del trazado del radioenlace Villa María – Taninga"
+        "src": "assets/images/projects/telecom-radioenlace/telecom-radioenlace-diagrama.png",
+        "caption": "Diagrama general de enlace y topología de red (16 tramos y 17 estaciones)"
       },
       {
-        "src": "assets/images/projects/telecom-radioenlace/image28.png",
-        "caption": "Perfil topográfico de elevación del terreno y elipsoide de Fresnel en Radio Mobile"
+        "src": "assets/images/projects/telecom-radioenlace/telecom-radioenlace-recorrido.png",
+        "caption": "Trazado cartográfico de los enlaces en la provincia de Córdoba en Radio Mobile"
       },
       {
-        "src": "assets/images/projects/telecom-radioenlace/image30.png",
-        "caption": "Estudio de visibilidad directa, cotas de terreno y cálculo de altura de torres"
+        "src": "assets/images/projects/telecom-radioenlace/telecom-radioenlace-perfil.png",
+        "caption": "Perfil topográfico de elevación del terreno y despeje de la 1° Zona de Fresnel"
       },
       {
-        "src": "assets/images/projects/telecom-radioenlace/image8.png",
-        "caption": "Ubicación geográfica y diagrama de estación repetidora pasiva en zona montañosa"
+        "src": "assets/images/projects/telecom-radioenlace/telecom-radioenlace-reflector.png",
+        "caption": "Reflector pasivo para salvar el obstáculo topográfico en zona montañosa"
       }
     ]
   },
