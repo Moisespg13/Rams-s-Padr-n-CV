@@ -374,8 +374,16 @@ window.PROJECTS_DATA = [
         "caption": "Bobina de choque (inductor de filtro) bobinada con núcleo de ferrita E20/10/6"
       },
       {
+        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p16_26.png",
+        "caption": "Esquema de control en LT Spice"
+      },
+      {
         "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p17_30.png",
         "caption": "Diseño y ruteo de la placa del circuito de control PWM en Altium Designer"
+      },
+      {
+        "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p10_7.jpeg",
+        "caption": "Medición de los 48V de salida en osciloscopio"
       },
       {
         "src": "assets/images/projects/potencia-dcdc/potencia-dcdc-p18_31.jpeg",
