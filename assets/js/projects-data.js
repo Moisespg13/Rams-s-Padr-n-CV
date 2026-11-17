@@ -564,13 +564,13 @@ window.PROJECTS_DATA = [
     "subject": "Control Digital de Procesos",
     "authors": "Padrón Ramsés",
     "pdfFile": "assets/docs/control-digital-robot-linea-matlab.pdf",
-    "summary": "Modelado cinemático diferencial con 3 grados de libertad, caracterización de actuadores y sensores ópticos, diseño de lazo de control digital y simulación en MATLAB & Simulink para un móvil seguidor de línea.",
+    "summary": "Modelado cinemático diferencial con 3 grados de libertad, caracterización de servomotores y sensores ópticos, y diseño de lazo de control digital en MATLAB & Simulink. El sistema logró un seguimiento óptimo de pista mediante control PI, mientras que la acción derivativa del PID desestabilizó la trayectoria por la discretización de los sensores.",
     "highlights": [
       "Modelado cinemático diferencial con variables de estado: posición planar (X, Y) y orientación angular (phi)",
-      "Caracterización electromecánica de servomotores HK15148 y medición con calibre de parámetros físicos (radio de rueda y trocha)",
-      "Modelado del arreglo frontal de 8 sensores infrarrojos reflectivos CNY70 y función interpretada de pista (readTrack)",
-      "Diseño, comparación y análisis transitorio de controladores discretos Proporcional (P), PI y PID en lazo cerrado",
-      "Implementación del bloque de odometría y simulación numérica completa de trayectorias en MATLAB & Simulink"
+      "Caracterización electromecánica de servomotores HK15148 y modelado del arreglo frontal de 8 sensores ópticos CNY70",
+      "Implementación del bloque de odometría para estimación continua de posición y función de detección de pista",
+      "Diseño y simulación comparativa de controladores discretos P, PI y PID en lazo cerrado para pistas circular y cardioide",
+      "Validación del control PI como estrategia óptima para superar ambas pistas, evidenciando que el control PID resultó ineficaz debido a la discretización espacial de los sensores"
     ],
     "specs": [
       {
@@ -587,11 +587,11 @@ window.PROJECTS_DATA = [
       },
       {
         "label": "Estrategias de Control",
-        "val": "Controladores discretos P, PI y PID en lazo cerrado"
+        "val": "Controladores discretos P, PI (óptimo) y PID (inestable por discretización)"
       },
       {
         "label": "Software & Simulación",
-        "val": "MATLAB & Simulink (diagramas de bloques dinámicos y funciones S)"
+        "val": "MATLAB & Simulink (diagramas de bloques dinámicos y lazo cerrado)"
       }
     ],
     "tags": [
@@ -601,83 +601,24 @@ window.PROJECTS_DATA = [
       "Matlab",
       "Simulación"
     ],
-    "heroImage": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p18_33.png",
-    "galleryTitle": "Modelado y Simulaciones en Simulink",
+    "heroImage": "assets/images/projects/control-seguidor-linea/seguidor-linea-diagrama-bloques.png",
+    "galleryTitle": "Diagrama de Bloques y Simulaciones de Control",
     "gallery": [
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p18_33.png",
-        "caption": "Simulación de trayectoria del móvil sobre la pista con controlador PI en Simulink"
+        "src": "assets/images/projects/control-seguidor-linea/seguidor-linea-diagrama-bloques.png",
+        "caption": "Diagrama de bloques del modelo en lazo cerrado en Simulink (Planta, Odometría, Sensores y Control)"
       },
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p14_22.png",
-        "caption": "Diagrama de bloques del modelo dinámico completo en Simulink (Planta, Actuadores y Control)"
+        "src": "assets/images/projects/control-seguidor-linea/seguidor-linea-simulacion-p.png",
+        "caption": "Simulación con controlador Proporcional (Kp=50): seguimiento efectivo en pista circular pero con dificultades en la cardioide"
       },
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p10_16.png",
-        "caption": "Disposición geométrica y distribución angular del arreglo de sensores ópticos CNY70"
+        "src": "assets/images/projects/control-seguidor-linea/seguidor-linea-simulacion-pi.png",
+        "caption": "Simulación con controlador Proporcional Integral (Ki=30): respuesta óptima y seguimiento exitoso en ambas pistas"
       },
       {
-        "src": "assets/images/projects/control-seguidor-linea/control-seguidor-linea-p17_30.png",
-        "caption": "Simulación de seguimiento con controlador Proporcional (P) evidenciando oscilaciones"
-      }
-    ]
-  },
-  {
-    "id": "senales-laboratorios",
-    "title": "Modelado, Convolución y Series de Fourier en MATLAB",
-    "category": "software",
-    "categoryLabel": "Simulación & CAD",
-    "date": "Mayo 2023",
-    "institution": "Facultad de Ingeniería - CRUC IUA",
-    "subject": "Análisis de Señales y Sistemas",
-    "authors": "Padrón Ramsés",
-    "pdfFile": "assets/docs/senales-sistemas-lab3-series-fourier.pdf",
-    "summary": "Serie de trabajos de laboratorio sobre procesamiento computacional de señales: análisis temporal y frecuencial de sistemas LTI, cálculo y simulación de convolución continua/discreta y descomposición en Series de Fourier.",
-    "highlights": [
-      "Síntesis computacional de señales senoidales y análisis del fenómeno de multitrayecto (Laboratorio 1)",
-      "Cálculo analítico y simulación gráfica interactiva de convolución continua y discreta para sistemas LTI (Laboratorio 2)",
-      "Descomposición armónica en Series de Fourier de una señal rectificada de onda completa acoplada a filtro RC (Laboratorio 3)",
-      "Comparación numérica entre coeficientes analíticos teóricos y Transformada Rápida de Fourier (FFT) en MATLAB",
-      "Análisis de respuesta en frecuencia y atenuación de armónicos en el dominio del tiempo y de la frecuencia"
-    ],
-    "specs": [
-      {
-        "label": "Software Principal",
-        "val": "MATLAB (entorno académico de cálculo y simulación)"
-      },
-      {
-        "label": "Toolboxes & Funciones",
-        "val": "SPFirst Toolbox (funciones dconvdemo, cconvdemo)"
-      },
-      {
-        "label": "Sistemas Analizados",
-        "val": "Sistemas Lineales e Invariantes en el Tiempo (LTI), filtros RC pasabajos"
-      },
-      {
-        "label": "Operaciones Matemáticas",
-        "val": "Convolución continua/discreta, Series de Fourier, FFT"
-      }
-    ],
-    "tags": [
-      "Matlab",
-      "Señales y Sistemas",
-      "convolución",
-      "Fourier"
-    ],
-    "heroImage": "assets/images/projects/senales-convolucion/senales-convolucion-p9_17.jpeg",
-    "galleryTitle": "Simulaciones en MATLAB",
-    "gallery": [
-      {
-        "src": "assets/images/projects/senales-convolucion/senales-convolucion-p9_17.jpeg",
-        "caption": "Simulación interactiva de convolución continua en MATLAB con interfaz SPFirst"
-      },
-      {
-        "src": "assets/images/projects/senales-convolucion/senales-convolucion-p10_20.jpeg",
-        "caption": "Convolución discreta y respuesta al impulso en sistemas discretos LTI"
-      },
-      {
-        "src": "assets/images/projects/senales-convolucion/senales-convolucion-p11_23.jpeg",
-        "caption": "Evaluación temporal del producto de convolución y superposición"
+        "src": "assets/images/projects/control-seguidor-linea/seguidor-linea-simulacion-pid.png",
+        "caption": "Simulación con controlador PID (Kd=0.3): inestabilidad y pérdida de trayectoria debido a la discretización de los sensores"
       }
     ]
   },
